@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Doctor | Dashboard</title>
+    <title>Nurse | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
@@ -44,10 +44,10 @@
   </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-        @include('include.doctor_header')
+        @include('include.nurse_header')
         
         <main class="py-4">
-            @include('include.doctor_sidebar')
+            @include('include.nurse_sidebar')
             
             @yield('content')
             

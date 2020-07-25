@@ -65,4 +65,27 @@ class PagesController extends Controller
        $updateUserTable->save();
        return back()->with('success','Hospital added successfully');
     }
+    public function uploadProfileImg(Request $request)
+    {
+        if ($request->hasFile('profileImage')) {
+            //Get file with extension
+            $fileNameWithExt = $request->file('profileImage')->getClientOriginalName();
+            //Get just file name
+            $filename = pathinfo($fileNameWithExt,PATHINFO_FILENAME);
+            //Get just ext
+           $extension = $request->file('profileImage')->getClientOriginalExtension();
+            //File to store
+            $fileNameToStore =  $filename.'_'.time().'.'.$extension;
+            //Upload the image
+            $path = $request->file('profileImage')->storeAs('public/profileimage', $fileNameToStore);
+
+       } else {
+        $fileToStore = 'noImage.jpg';
+        
+       }
+       $upload = User::find(Auth::user()->id);
+       $upload-> image = $fileNameToStore;
+       $upload->save();
+       return back()->with('success','Passport uploaded successfully!');
+    } 
 }

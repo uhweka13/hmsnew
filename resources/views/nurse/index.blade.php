@@ -1,4 +1,4 @@
-@extends('layouts.hospital_app')
+@extends('layouts.nurse_app')
 @section('content')
         <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -12,8 +12,8 @@
               </div><!-- /.col -->
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                  <li class="breadcrumb-item"><a href="hospital-index">Home</a></li>
-                  <li class="breadcrumb-item active">Admin Dashboard</li>
+                  <li class="breadcrumb-item"><a href="admin-index">Home</a></li>
+                  <li class="breadcrumb-item active">Nurse Dashboard</li>
                 </ol>
               </div><!-- /.col -->
             </div><!-- /.row -->
@@ -30,21 +30,7 @@
                 <div class="small-box bg-info">
                   <div class="inner">
                     <h3>1</h3>  
-                    <p>Department</p>
-                  </div>
-                  <div class="icon">
-                    <i class="icon ion-ios-browsers"></i>
-                  </div>
-                  <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-              </div>
-              <!-- ./col -->
-              <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-success">
-                  <div class="inner">
-                        <h3>5</h3>   
-                    <p>Users</p>
+                    <p>Patents recrds</p>
                   </div>
                   <div class="icon">
                     <i class="icon ion-ios-people"></i>
@@ -55,15 +41,30 @@
               <!-- ./col -->
               <div class="col-lg-3 col-6">
                 <!-- small box -->
+                <div class="small-box bg-success">
+                  <div class="inner">
+                        <h3>5</h3>   
+                    <p>Nourses</p>
+                  </div>
+                  <div class="icon">
+                    <i class="icon ion-ios-browsers"></i>
+                  </div>
+                  <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+              <!-- ./col -->
+              <div class="col-lg-3 col-6">
+                <!-- small box -->
                 <div class="small-box bg-warning">
                   <div class="inner">
                   <h3>4</h3> 
-                    <p>Records</p>
+    
+                    <p>Diagnose</p>
                   </div>
                   <div class="icon">
                     <i class="icon ion-chatbubble"></i>
                   </div>
-                  <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                  <a href="contacts" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
               </div>
               <!-- ./col -->
@@ -73,7 +74,7 @@
                   <div class="inner">
                     <h3>6</h3>
     
-                    <p>Profile</p>
+                    <p>Pharmacy</p>
                   </div>
                   <div class="icon">
                     <i class="ion ion-person-add"></i>

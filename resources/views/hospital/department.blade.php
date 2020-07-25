@@ -28,7 +28,7 @@
                 <button type="button" data-toggle="modal" data-target="#modalAddPersonel" class="btn btn-md btn-default">Add</button>
                 <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Patient</h3>
+                    <h3 class="card-title">Department</h3>
                     <div class="card-tools">
                     <div class="input-group input-group-sm" style="width: 150px;">
                         <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -41,50 +41,38 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body table-responsive p-0">
-                  @if (count($result['patients']) > 0)
+                  @if (count($result['departments']) > 0)
                   <table class="table table-hover">
                       <thead>
                           <tr>
                           <th>ID</th>
-                          <th>Names</th>
-                          <th>Age</th>
-                          <th>Gender</th>
-                          <th>Phone Number</th>
-                          <th>State</th>
-                          <th>Location</th>
+                          <th>Name</th>
                           <th>Action</th>
                           </tr>
                       </thead>
-                      @foreach ($result['patients'] as $patient)
+                      @foreach ($result['departments'] as $department)
 
                     <tbody>
                         <tr>
-                        <td>{{$patient->id}}</td>                      
-                         <td>{{$patient->fName}}{{$patient->mName}}{{$patient->lName}}</td>
-                        <td>{{$patient->email}}</td>
-                        <td>{{$patient->gender}}</td>
-                        <td>{{$patient->phone}}</td>
-                        <td>{{$patient->state}}</td>
-                        <td>{{$patient->residArea}}</td>
+                        <td>{{$department->id}}</td>                      
+                        <td>{{$department->name}}</td>
                         <td>
-                    <button data-toggle="modal" data-target="#delete{{$patient->id}}">
+                    <button data-toggle="modal" data-target="#delete{{$department->id}}">
                         <i class="fas fa-eject text-red"></i>
                         </button>
                         </td>
                         <!-- Delete news modal-->
-                      <div class="modal fade" id="delete{{$patient->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                      <div class="modal fade" id="delete{{$department->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                       aria-hidden="true">
 
                       <!-- Change class .modal-sm to change the size of the modal -->
                       <div class="modal-dialog modal-sm" role="document">
-
-
                         <div class="modal-content">
                           <div class="modal-body">
-                              <form action="/deletePatient" method="post" id="deleteUser">
+                              <form action="/deleteDepartment" method="post" id="deleteDepartment">
                                 @csrf
-                              <input name="patientId" id="id" type="hidden" value="{{$patient->id}}">
-                              <h5>Are you sure delete Patient?</h5>
+                              <input name="personelId" id="id" type="hidden" value="{{$department->id}}">
+                              <h5>Are you sure deleting Department?</h5>
                               <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
                             <button type="submit" type="submit" class="btn btn-danger btn-sm pull-right">Delete</button>
                               </form>
@@ -106,7 +94,7 @@
                   @endif
                 </div>
                 <!-- /.card-body -->
-                {{$result['patients']->links()}}
+                {{$result['departments']->links()}}
                 </div>
                 <!-- /.card -->
             </div>
@@ -121,55 +109,22 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Add a patient</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Add Department</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
 <div class="modal-body mx-3">
-  <form method="POST" action="/add-patient-hospital" role="form" id="patientForm">
+  <form method="POST" action="/add-department" role="form" id="departmentForm">
     @csrf
          <div class="md-form mb-4">
-            
-            <input type="text" id="form3" name="fName" class="form-control form-control-sm validate" placeholder="Firstname">
+            <input type="text" id="form3" name="department" class="form-control form-control-sm validate" placeholder="Department name">
         </div>
-        <div class="md-form mb-4">
-            <input type="text" id="form3" name="mName" class="form-control form-control-sm validate" placeholder="Middlename">
-        </div>
-        <div class="md-form mb-4">
-            <input type="text" id="form3" name="lName" class="form-control form-control-sm validate" placeholder="Lastname">
-        </div>
-        <div class="md-form mb-4">
-            <input type="date" id="form2" name="age" class="form-control form-control-sm validate" placeholder="Age">
-        </div>
-        <div class="md-form mb-4">
-          <input type="text" id="form2" name="phone" class="form-control form-control-sm validate" placeholder="Phone">
-      </div>
-        <div class="md-form mb-4">
-            <input type="text" id="form3" name="residArea" class="form-control form-control-sm validate" placeholder="Residential Address">
-            
-        </div>
-        <div class="md-form mb-4">
-            <select name="state" id="" class="form-control form-control-sm validated">
-                <option value="" disabled selected>Choose role</option>
-                <option value="doctor">Doctor</option>
-                <option value="Nurse">Nurse</option>
-                <option value="pharmacy">Pharmcy</option>
-                <option value="other">other</option>
-            </select>
-        </div>
-        
-          <div class="md-form mb-4">
-                    <input type="password" id="form3" name="password" class="form-control form-control-sm validate" placeholder="Password">
-            </div>
-            <div class="md-form mb-4">
-                    <input type="password" id="form3" name="confirmPassword" class="form-control form-control-sm validate" placeholder="Comfirmpassword">
-            </div>
   </form>
 
 </div>
 <div class="modal-footer d-flex justify-content-center">
-<button class="btn btn-default" type="submit" form="patientForm">Add<i class="fas fa-paper-plane-o ml-1"></i></button>
+<button class="btn btn-default" type="submit" form="departmentForm">Add<i class="fas fa-paper-plane-o ml-1"></i></button>
 </div>
 </div>
 </div>

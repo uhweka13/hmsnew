@@ -18,11 +18,12 @@ class CreatePatientsTable extends Migration
             $table->string('fName');
             $table->string('mName');
             $table->string('lName');
-            $table->string('email');
+            $table->string('age');
             $table->string('phone');
             $table->string('residArea');
             $table->string('state');
-            $table->string('password');
+            $table->string('gender');
+            $table->string('status');
             $table->string('image')->nullable();
             $table->timestamps();
         });

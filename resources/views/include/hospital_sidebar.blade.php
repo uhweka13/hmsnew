@@ -12,11 +12,11 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+      <img src="/storage/profileimage/{{Auth::user()->image}}" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="/hospital-index" class="d-block">JUTH</a>
-        {{-- <a href="/hospital-index" class="d-block">{{$displayHospital}}</a> --}}
+        {{-- <a href="/hospital-index" class="d-block">JUTH</a> --}}
+        <a href="/hospital-index" class="d-block">{{$result['displayHospital']}}</a>
       </div>
     </div>
 
@@ -27,7 +27,7 @@
              with font-awesome or any other icon font library -->
 
         <li class="nav-item">
-          <a href="/admin-index" class="nav-link">
+          <a href="/hospital-index" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
               Dashboard
@@ -35,10 +35,10 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="/news" class="nav-link">
+          <a href="/setup" class="nav-link">
             <i class="fas fa-blog"></i>
             <p>
-              Post News
+              Department
             </p>
           </a>
         </li>
@@ -58,14 +58,14 @@
                   </a>
                 </li>
             <li class="nav-item">
-              <a href="/patient" class="nav-link">
+              <a href="/patient-hospital" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Add Patient</p>
               </a>
             </li>
           </ul>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="fas fa-id-card-alt"></i>
             <p>
@@ -107,7 +107,7 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li> --}}
         <li class="nav-item">
             <a class="nav-link" href="{{ route('logout') }}"
             onclick="event.preventDefault();

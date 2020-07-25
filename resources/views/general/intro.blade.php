@@ -30,6 +30,7 @@
     <p> <strong>Phone number:</strong>&nbsp;{{Auth::user()->phone}}</p>
     <form action="/uploadProfileImage" method="post" enctype="multipart/form-data">
     @csrf
+    <input type="hidden" name="adminId" value="{{Auth::user()->id}}">
     <div class="form-group">
     <label for="profileImage"><strong>Upload your passport</strong></label>
     <input type="file" name="profileImage"class="form-control" >
@@ -78,9 +79,48 @@
         <div class="col">
             <!-- Hospital State -->
             <select name="hState" id="hState" class="form-control form-control-sm">
-                <option disabled selected>State</option>
-                <option value="public">Public</option>
-                <option value="private">Private</option>
+                 <option value="" disabled selected>Choose State</option>
+                      <option value="Abia">Abia Umuahia</option>
+                      <option value="Adamawa">Adamawa Yola</option>
+                      <option value="Akwa Ibom">Akwa Ibom Uyo</option>
+                      <option value="Anambra">Anambra Awka</option>
+                      <option value="Bauchi">Bauchi Bauchi</option>
+                      <option value="Bayelsa">Bayelsa Yenagoa</option>
+                      <option value="Benue">Benue Makurdi</option>
+                      <option value="Borno">Borno Maiduguri</option>
+                      <option value="Cross">Cross River Calabar</option>
+                      <option value="Delta">Delta Asaba</option>
+                      <option value="Ebonyi">Ebonyi Abakaliki</option>
+                      <option value="Edo">Edo Benin City</option>
+                      <option value="Ekiti">Ekiti Ado - Ekiti</option>
+                      <option value="Enugu">Enugu Enugu</option>
+                      <option value="Gombe">Gombe Gombe	</option>
+                      <option value="Imo">Imo Owerri</option>
+                      <option value="Abia">Abia Umuahia</option>
+                      <option value="Adamawa">Adamawa Yola</option>
+                      <option value="Akwa">Akwa Ibom Uyo</option>
+                      <option value="Anambra">Anambra Awka</option>
+                      <option value="Bauchi">Bauchi Bauchi</option>
+                      <option value="Jigawa">Jigawa Dutse</option>
+                      <option value="Kaduna">Kaduna Kaduna</option>
+                      <option value="Kano">Kano Kano</option>
+                      <option value="Katsina">Katsina Katsina</option>
+                      <option value="Kebbi">Kebbi Birnin Kebbi</option>
+                      <option value="Kogi">Kogi	Lokoja</option>
+                      <option value="Kwara">Kwara Ilorin</option>
+                      <option value="Lagos">Lagos Ikeja</option>
+                      <option value="Nasarawa">Nasarawa Lafia</option>
+                      <option value="Ogun">Ogun Abeokuta</option>
+                      <option value="Ondo">Ondo Akure</option>
+                      <option value="Osun">Osun Oshogbo</option>
+                      <option value="Oyo">Oyo Ibadan</option>
+                      <option value="Plateau">Plateau Jos</option>
+                      <option value="Rivers">Rivers Port Harcourt</option>
+                      <option value="Sokoto">Sokoto Sokoto</option>
+                      <option value="Taraba">Taraba Jalingo</option>
+                      <option value="Yobe">Yobe Damaturu</option>
+                      <option value="Zamfara">Zamfara Gusau</option>
+                      <option value="Abuja">Abuja FCT</option>
             </select>
         </div>
     </div>

@@ -9,6 +9,7 @@ use App\Hospital;
 use App\User;
 use App\Personel;
 use App\Patient;
+use App\Department;
 use DB;
 class HospitalsController extends Controller
 {
@@ -106,12 +107,73 @@ class HospitalsController extends Controller
     public function personel()
     {
       $personels = User::orderBy('created_at','DESC')->paginate(20);
-      return view('hospital.add_personel')->with('personels',$personels);
+      $departments = Department::all();
+      $id = Auth::user()->id;
+        $role = 'admin';
+        $hospitals = DB::table('hospitals')
+        ->select('hospitals.hName', 'users.role')
+        ->join('users','users.hId','=','hospitals.id')
+        ->where(['users.id'=> $id, 'users.role'=>$role ])
+        ->orWhere(function($query) use ($id, $role)
+        {
+            $query->where(['users.id'=> $id, 'users.role'=>$role ]);
+        })
+        ->get();
+        foreach ($hospitals as $key => $hospital) {
+         $displayHospital = $hospital->hName;
+        }
+      $result = array(
+          'personels'=>$personels,
+          'departments'=>$departments,
+          'displayHospital'=>$displayHospital
+      );
+      return view('hospital.add_personel')->with('result',$result);
     }
-    public function patient()
+    public function patient_hospital()
     {
       $patients = User::orderBy('created_at','DESC')->paginate(20);
-      return view('hospital.add_patient')->with('patients',$patients);
+      $id = Auth::user()->id;
+      $role = 'admin';
+      $hospitals = DB::table('hospitals')
+      ->select('hospitals.hName', 'users.role')
+      ->join('users','users.hId','=','hospitals.id')
+      ->where(['users.id'=> $id, 'users.role'=>$role ])
+      ->orWhere(function($query) use ($id, $role)
+      {
+          $query->where(['users.id'=> $id, 'users.role'=>$role ]);
+      })
+      ->get();
+      foreach ($hospitals as $key => $hospital) {
+       $displayHospital = $hospital->hName;
+      }
+      $result = array(
+        'patients'=>$patients,
+        'displayHospital'=>$displayHospital
+      );
+      return view('hospital.add_patient')->with('$result',$result);
+    }
+    public function department()
+    {
+        $departments = Department::orderBy('created_at','DESC')->paginate(20);
+        $id = Auth::user()->id;
+        $role = 'admin';
+        $hospitals = DB::table('hospitals')
+        ->select('hospitals.hName', 'users.role')
+        ->join('users','users.hId','=','hospitals.id')
+        ->where(['users.id'=> $id, 'users.role'=>$role ])
+        ->orWhere(function($query) use ($id, $role)
+        {
+            $query->where(['users.id'=> $id, 'users.role'=>$role ]);
+        })
+        ->get();
+        foreach ($hospitals as $key => $hospital) {
+         $displayHospital = $hospital->hName;
+        }
+        $result = array(
+          'departments'=>$departments,
+          'displayHospital'=>$displayHospital
+        );
+        return view('hospital.department')->with('result',$result);
     }
     public function addPersonel(Request $request)
     {
@@ -123,6 +185,7 @@ class HospitalsController extends Controller
         'phone'=>'required',
         'residArea'=>'required',
         'role'=>'required',
+        'department'=>'required',
         'password'=>'required',
       ]);
       $password = $request->input('password');
@@ -139,22 +202,25 @@ class HospitalsController extends Controller
       $post-> phone = $request->input('phone');
       $post-> residArea = $request->input('residArea');
       $post-> role = $request->input('role');
+      $post-> department = $request->input('department');
+      $post-> gender = $request->input('gender');
+      $post-> hId = Auth::user()->hId;
       $post-> password = Hash::make($password);
       $post->save();
       return back()->with('success','Personel added successfully!');
     }
     public function addPatient(Request $request)
     {
-    //   $this->validate($request,[
-    //     'fName'=>'required',
-    //     'mName'=>'required',
-    //     'lName'=>'required',
-    //     'email'=>'required',
-    //     'phone'=>'required',
-    //     'state'=>'required',
-    //     'residArea'=>'required',
-    //     'password'=>'required',
-    //   ]);
+      $this->validate($request,[
+        'fName'=>'required',
+        'mName'=>'required',
+        'lName'=>'required',
+        'age'=>'required',
+        'phone'=>'required',
+        'state'=>'required',
+        'residArea'=>'required',
+        'password'=>'required',
+      ]);
       $password = $request->input('password');
       $cpassword = $request->input('password');
       if ($password != $cpassword) {
@@ -165,12 +231,24 @@ class HospitalsController extends Controller
       $post-> fName = $request->input('fName');
       $post-> mName = $request->input('mName');
       $post-> lName = $request->input('lName');
-      $post-> email = $request->input('email');
+      $post-> age = $request->input('age');
       $post-> phone = $request->input('phone');
       $post-> state = $request->input('state');
       $post-> residArea = $request->input('residArea');
       $post-> password = Hash::make($password);
       $post->save();
-      return back()->with('success','Personel added successfully!');
+      return back()->with('success','Patient added successfully!');
+    }
+    public function addDepartment(Request $request)
+    {
+      $this->validate($request,[
+        'department'=>'required',
+        
+      ]);
+      
+      $post = new Department();
+      $post-> name = $request->input('department');
+      $post->save();
+      return back()->with('success','Department added successfully!');
     }
 }

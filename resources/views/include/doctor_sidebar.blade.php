@@ -15,8 +15,8 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="/hospital-index" class="d-block">JUTH</a>
-          {{-- <a href="/hospital-index" class="d-block">{{$displayHospital}}</a> --}}
+          {{-- <a href="/hospital-index" class="d-block">JUTH</a> --}}
+          <a href="/hospital-index" class="d-block">{{Auth::user()->fName}}</a>
         </div>
       </div>
   
@@ -27,7 +27,7 @@
                with font-awesome or any other icon font library -->
   
           <li class="nav-item">
-            <a href="/admin-index" class="nav-link">
+            <a href="/doctor-index" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -35,36 +35,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/news" class="nav-link">
+            <a href="/doc-consultancy" class="nav-link">
               <i class="fas fa-blog"></i>
               <p>
-                Diagnose
+                Consultancy
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/news" class="nav-link">
-              <i class="fas fa-blog"></i>
-              <p>
-                Patient History
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/patient-records" class="nav-link">
               <i class="fas fa-id-card-alt"></i>
               <p>
-                Nurses
+                Patient records
               </p>
             </a>
           </li>
-              <li class="nav-item">
-                <a href="/view-deposite" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Pending deposite</p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="{{ route('logout') }}"

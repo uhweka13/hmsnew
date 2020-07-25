@@ -41,7 +41,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body table-responsive p-0">
-                  @if (count($personels) > 0)
+                  @if (count($result['personels']) > 0)
                   <table class="table table-hover">
                       <thead>
                           <tr>
@@ -51,19 +51,21 @@
                           <th>Phone Number</th>
                           <th>Location</th>
                           <th>Role</th>
+                          <th>Department</th>
                           <th>Action</th>
                           </tr>
                       </thead>
-                      @foreach ($personels as $personel)
+                      @foreach ($result['personels'] as $personel)
 
                     <tbody>
                         <tr>
                         <td>{{$personel->id}}</td>                      
-                         <td>{{$personel->fName}}{{$personel->mName}}{{$personel->lName}}</td>
+                         <td>{{$personel->fName}}&nbsp;{{$personel->mName}}&nbsp;{{$personel->lName}}</td>
                         <td>{{$personel->email}}</td>
                         <td>{{$personel->phone}}</td>
                         <td>{{$personel->residArea}}</td>
                         <td>{{$personel->role}}</td>
+                        <td>{{$personel->department}}</td>
                         <td>
                     <button data-toggle="modal" data-target="#delete{{$personel->id}}">
                         <i class="fas fa-eject text-red"></i>
@@ -104,7 +106,7 @@
                   @endif
                 </div>
                 <!-- /.card-body -->
-                {{$personels->links()}}
+                {{$result['personels']->links()}}
                 </div>
                 <!-- /.card -->
             </div>
@@ -153,11 +155,30 @@
                 <option value="" disabled selected>Choose role</option>
                 <option value="doctor">Doctor</option>
                 <option value="Nurse">Nurse</option>
-                <option value="pharmacy">Pharmcy</option>
+                <option value="pharmacy">Pharmacy</option>
                 <option value="other">other</option>
             </select>
         </div>
-        
+        <div class="md-form mb-4">
+          <select name="department" id="" class="form-control form-control-sm validated">
+              <option value="" disabled selected>Choose department</option>
+              @if (count($result['departments']) > 0)
+                  @foreach ($result['departments'] as $department)
+                 <option value="{{$department->name}}">{{$department->name}}</option>
+                  @endforeach
+              @else
+                  <p>No record</p>
+              @endif
+          </select>
+      </div>
+      <div class="md-form mb-4">
+        <select name="gender" id="" class="form-control form-control-sm validated">
+            <option value="" disabled selected>Choose gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
           <div class="md-form mb-4">
                     <input type="password" id="form3" name="password" class="form-control form-control-sm validate" placeholder="Password">
             </div>
