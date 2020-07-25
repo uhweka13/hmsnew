@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@index');
 
+Route::get('/super', 'SuperAdminController@index');
+
+Route::get('/order', 'SuperAdminController@order');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
