@@ -1,5 +1,9 @@
 /*!
+<<<<<<< HEAD
  *   AdminLTE v3.0.2
+=======
+ *   AdminLTE v3.0.2-pre
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
  *     Only Extra Components
  *   Author: Colorlib
  *   Website: AdminLTE.io <http://adminlte.io>
@@ -755,6 +759,7 @@
   border-left-color: #343a40;
 }
 
+<<<<<<< HEAD
 .direct-chat-lightblue .right > .direct-chat-text {
   background: #3c8dbc;
   border-color: #3c8dbc;
@@ -765,6 +770,8 @@
   border-left-color: #3c8dbc;
 }
 
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
 .direct-chat-navy .right > .direct-chat-text {
   background: #001f3f;
   border-color: #001f3f;

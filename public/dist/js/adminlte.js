@@ -1,6 +1,11 @@
 /*!
+<<<<<<< HEAD
  * AdminLTE v3.0.3-pre (https://adminlte.io)
  * Copyright 2014-2020 Colorlib <http://colorlib.com>
+=======
+ * AdminLTE v3.0.2-pre (https://adminlte.io)
+ * Copyright 2014-2019 Colorlib <http://colorlib.com>
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
  * Licensed under MIT (https://github.com/ColorlibHQ/AdminLTE/blob/master/LICENSE)
  */
 (function (global, factory) {
@@ -326,9 +331,13 @@
     };
     var Default = {
       scrollbarTheme: 'os-theme-light',
+<<<<<<< HEAD
       scrollbarAutoHide: 'l',
       panelAutoHeight: true,
       loginRegisterAutoHeight: true
+=======
+      scrollbarAutoHide: 'l'
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
     };
     /**
      * Class Definition
@@ -369,6 +378,7 @@
 
         var max = this._max(heights);
 
+<<<<<<< HEAD
         var offset = this._config.panelAutoHeight;
 
         if (offset === true) {
@@ -389,6 +399,18 @@
           if (offset !== false) {
             $(Selector.CONTENT).css('min-height', max + offset - heights.header - heights.footer);
           }
+=======
+        if (max == heights.control_sidebar) {
+          $(Selector.CONTENT).css('min-height', max);
+        } else if (max == heights.window) {
+          $(Selector.CONTENT).css('min-height', max - heights.header - heights.footer);
+        } else {
+          $(Selector.CONTENT).css('min-height', max - heights.header);
+        }
+
+        if ($('body').hasClass(ClassName.LAYOUT_FIXED)) {
+          $(Selector.CONTENT).css('min-height', max - heights.header - heights.footer);
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
 
           if (typeof $.fn.overlayScrollbars !== 'undefined') {
             $(Selector.SIDEBAR).overlayScrollbars({
@@ -401,6 +423,7 @@
             });
           }
         }
+<<<<<<< HEAD
       };
 
       _proto.fixLoginRegisterHeight = function fixLoginRegisterHeight() {
@@ -413,6 +436,8 @@
             $('body').css('min-height', box_height);
           }
         }
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
       } // Private
       ;
 
@@ -421,6 +446,7 @@
 
         // Activate layout height watcher
         this.fixLayoutHeight();
+<<<<<<< HEAD
 
         if (this._config.loginRegisterAutoHeight === true) {
           this.fixLoginRegisterHeight();
@@ -428,6 +454,8 @@
           setInterval(this.fixLoginRegisterHeight, this._config.loginRegisterAutoHeight);
         }
 
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
         $(Selector.SIDEBAR).on('collapsed.lte.treeview expanded.lte.treeview', function () {
           _this.fixLayoutHeight();
         });
@@ -442,6 +470,17 @@
         $(window).resize(function () {
           _this.fixLayoutHeight();
         });
+<<<<<<< HEAD
+=======
+
+        if (!$('body').hasClass(ClassName.LOGIN_PAGE) && !$('body').hasClass(ClassName.REGISTER_PAGE)) {
+          $('body, html').css('height', 'auto');
+        } else if ($('body').hasClass(ClassName.LOGIN_PAGE) || $('body').hasClass(ClassName.REGISTER_PAGE)) {
+          var box_height = $(Selector.LOGIN_BOX + ', ' + Selector.REGISTER_BOX).height();
+          $('body').css('min-height', box_height);
+        }
+
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
         $('body.hold-transition').removeClass('hold-transition');
       };
 
@@ -458,10 +497,13 @@
       ;
 
       Layout._jQueryInterface = function _jQueryInterface(config) {
+<<<<<<< HEAD
         if (config === void 0) {
           config = '';
         }
 
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
         return this.each(function () {
           var data = $(this).data(DATA_KEY);
 
@@ -472,9 +514,13 @@
             $(this).data(DATA_KEY, data);
           }
 
+<<<<<<< HEAD
           if (config === 'init' || config === '') {
             data['_init']();
           } else if (config === 'fixLayoutHeight' || config === 'fixLoginRegisterHeight') {
+=======
+          if (config === 'init') {
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
             data[config]();
           }
         });
@@ -1151,8 +1197,11 @@
     var ClassName = {
       CARD: 'card',
       COLLAPSED: 'collapsed-card',
+<<<<<<< HEAD
       COLLAPSING: 'collapsing-card',
       EXPANDING: 'expanding-card',
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
       WAS_COLLAPSED: 'was-collapsed',
       MAXIMIZED: 'maximized-card'
     };
@@ -1196,11 +1245,19 @@
       _proto.collapse = function collapse() {
         var _this = this;
 
+<<<<<<< HEAD
         this._parent.addClass(ClassName.COLLAPSING).children(Selector.CARD_BODY + ", " + Selector.CARD_FOOTER).slideUp(this._settings.animationSpeed, function () {
           _this._parent.addClass(ClassName.COLLAPSED).removeClass(ClassName.COLLAPSING);
         });
 
         this._parent.find('> ' + Selector.CARD_HEADER + ' ' + this._settings.collapseTrigger + ' .' + this._settings.collapseIcon).addClass(this._settings.expandIcon).removeClass(this._settings.collapseIcon);
+=======
+        this._parent.children(Selector.CARD_BODY + ", " + Selector.CARD_FOOTER).slideUp(this._settings.animationSpeed, function () {
+          _this._parent.addClass(ClassName.COLLAPSED);
+        });
+
+        this._parent.find(this._settings.collapseTrigger + ' .' + this._settings.collapseIcon).addClass(this._settings.expandIcon).removeClass(this._settings.collapseIcon);
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
 
         var collapsed = $.Event(Event.COLLAPSED);
 
@@ -1210,11 +1267,19 @@
       _proto.expand = function expand() {
         var _this2 = this;
 
+<<<<<<< HEAD
         this._parent.addClass(ClassName.EXPANDING).children(Selector.CARD_BODY + ", " + Selector.CARD_FOOTER).slideDown(this._settings.animationSpeed, function () {
           _this2._parent.removeClass(ClassName.COLLAPSED).removeClass(ClassName.EXPANDING);
         });
 
         this._parent.find('> ' + Selector.CARD_HEADER + ' ' + this._settings.collapseTrigger + ' .' + this._settings.expandIcon).addClass(this._settings.collapseIcon).removeClass(this._settings.expandIcon);
+=======
+        this._parent.children(Selector.CARD_BODY + ", " + Selector.CARD_FOOTER).slideDown(this._settings.animationSpeed, function () {
+          _this2._parent.removeClass(ClassName.COLLAPSED);
+        });
+
+        this._parent.find(this._settings.collapseTrigger + ' .' + this._settings.expandIcon).addClass(this._settings.collapseIcon).removeClass(this._settings.expandIcon);
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
 
         var expanded = $.Event(Event.EXPANDED);
 
@@ -1431,6 +1496,15 @@
         if (this._settings.source === '') {
           throw new Error('Source url was not defined. Please specify a url in your CardRefresh source option.');
         }
+<<<<<<< HEAD
+=======
+
+        this._init();
+
+        if (this._settings.loadOnInit) {
+          this.load();
+        }
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
       }
 
       var _proto = CardRefresh.prototype;
@@ -1478,10 +1552,13 @@
         $(this).find(this._settings.trigger).on('click', function () {
           _this.load();
         });
+<<<<<<< HEAD
 
         if (this._settings.loadOnInit) {
           this.load();
         }
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
       } // Static
       ;
 
@@ -1497,7 +1574,11 @@
 
         if (typeof config === 'string' && config.match(/load/)) {
           data[config]();
+<<<<<<< HEAD
         } else {
+=======
+        } else if (typeof config === 'object') {
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
           data._init($(this));
         }
       };
@@ -1517,11 +1598,14 @@
 
       CardRefresh._jQueryInterface.call($(this), 'load');
     });
+<<<<<<< HEAD
     $(document).ready(function () {
       $(Selector.DATA_REFRESH).each(function () {
         CardRefresh._jQueryInterface.call($(this));
       });
     });
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
     /**
      * jQuery API
      * ====================================================
@@ -1553,6 +1637,7 @@
     var DATA_KEY = 'lte.dropdown';
     var JQUERY_NO_CONFLICT = $.fn[NAME];
     var Selector = {
+<<<<<<< HEAD
       NAVBAR: '.navbar',
       DROPDOWN_MENU: '.dropdown-menu',
       DROPDOWN_MENU_ACTIVE: '.dropdown-menu.show',
@@ -1562,6 +1647,11 @@
       DROPDOWN_HOVER: 'dropdown-hover',
       DROPDOWN_RIGHT: 'dropdown-menu-right'
     };
+=======
+      DROPDOWN_MENU: 'ul.dropdown-menu',
+      DROPDOWN_TOGGLE: '[data-toggle="dropdown"]'
+    };
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
     var Default = {};
     /**
      * Class Definition
@@ -1589,6 +1679,7 @@
         this._element.parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
           $('.dropdown-submenu .show').removeClass("show").hide();
         });
+<<<<<<< HEAD
       };
 
       _proto.fixPosition = function fixPosition() {
@@ -1618,6 +1709,8 @@
             }
           }
         }
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
       } // Static
       ;
 
@@ -1632,7 +1725,11 @@
             $(this).data(DATA_KEY, data);
           }
 
+<<<<<<< HEAD
           if (config === 'toggleSubmenu' || config == 'fixPosition') {
+=======
+          if (config === 'toggleSubmenu') {
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
             data[config]();
           }
         });
@@ -1651,6 +1748,7 @@
       event.stopPropagation();
 
       Dropdown._jQueryInterface.call($(this), 'toggleSubmenu');
+<<<<<<< HEAD
     });
     $(Selector.NAVBAR + ' ' + Selector.DROPDOWN_TOGGLE).on("click", function (event) {
       event.preventDefault();
@@ -1658,6 +1756,15 @@
         Dropdown._jQueryInterface.call($(this), 'fixPosition');
       }, 1);
     });
+=======
+    }); // $(Selector.SIDEBAR + ' a').on('focusin', () => {
+    //   $(Selector.MAIN_SIDEBAR).addClass(ClassName.SIDEBAR_FOCUSED);
+    // })
+    // $(Selector.SIDEBAR + ' a').on('focusout', () => {
+    //   $(Selector.MAIN_SIDEBAR).removeClass(ClassName.SIDEBAR_FOCUSED);
+    // })
+
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
     /**
      * jQuery API
      * ====================================================

@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /*!
+<<<<<<< HEAD
  *   AdminLTE v3.0.2
+=======
+ *   AdminLTE v3.0.2-pre
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
  *     Only Plugins
  *   Author: Colorlib
  *   Website: AdminLTE.io <http://adminlte.io>
@@ -666,6 +670,7 @@
   border-color: #6d7a86;
 }
 
+<<<<<<< HEAD
 .select2-container--default .select2-lightblue.select2-dropdown .select2-search__field:focus,
 .select2-container--default .select2-lightblue .select2-dropdown .select2-search__field:focus,
 .select2-container--default .select2-lightblue .select2-search--inline .select2-search__field:focus,
@@ -715,6 +720,8 @@
   border-color: #99c5de;
 }
 
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
 .select2-container--default .select2-navy.select2-dropdown .select2-search__field:focus,
 .select2-container--default .select2-navy .select2-dropdown .select2-search__field:focus,
 .select2-container--default .select2-navy .select2-search--inline .select2-search__field:focus,
@@ -1641,10 +1648,13 @@
   background: #343a40;
 }
 
+<<<<<<< HEAD
 .slider-lightblue .slider .slider-selection {
   background: #3c8dbc;
 }
 
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
 .slider-navy .slider .slider-selection {
   background: #001f3f;
 }
@@ -1845,6 +1855,7 @@
   border-color: #343a40;
 }
 
+<<<<<<< HEAD
 .icheck-lightblue > input:first-child:not(:checked):not(:disabled):hover + label::before,
 .icheck-lightblue > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
   border-color: #3c8dbc;
@@ -1861,6 +1872,8 @@
   border-color: #3c8dbc;
 }
 
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
 .icheck-navy > input:first-child:not(:checked):not(:disabled):hover + label::before,
 .icheck-navy > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
   border-color: #001f3f;
@@ -3355,6 +3368,7 @@
   color: #343a40;
 }
 
+<<<<<<< HEAD
 .pace-lightblue .pace .pace-progress {
   background: #3c8dbc;
 }
@@ -3486,6 +3500,8 @@
   color: #3c8dbc;
 }
 
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
 .pace-navy .pace .pace-progress {
   background: #001f3f;
 }
@@ -5952,12 +5968,15 @@
   color: #ffffff;
 }
 
+<<<<<<< HEAD
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-lightblue,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-lightblue {
   background: #3c8dbc;
   color: #ffffff;
 }
 
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-navy,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-navy {
   background: #001f3f;
