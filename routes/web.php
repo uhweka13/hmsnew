@@ -27,7 +27,7 @@ Route::get('/personel', 'HospitalsController@personel');
 Route::get('/patient-hospital', 'HospitalsController@patient_hospital');
 Route::get('/setup', 'HospitalsController@department');
 Route::post('/add-personel', 'HospitalsController@addPersonel');
-Route::post('/', 'HospitalsController@addPatient');
+Route::post('/add-patient-hospital', 'HospitalsController@addPatient');
 Route::post('/add-department', 'HospitalsController@addDepartment');
 //Doctor Control
 Route::resource('/doctor-index', 'DoctorsController');

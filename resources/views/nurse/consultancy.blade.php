@@ -46,7 +46,7 @@
                           <tr>
                           <th>ID</th>
                           <th>Names</th>
-                          <th>Email Address</th>
+                          <th>Age</th>
                           <th>Phone Number</th>
                           <th>State</th>
                           <th>Location</th>
@@ -59,7 +59,7 @@
                         <tr>
                         <td>{{$consultancy->id}}</td>                      
                          <td>{{$consultancy->fName}}&nbsp;{{$consultancy->mName}}&nbsp;{{$consultancy->lName}}</td>
-                        <td>{{$consultancy->email}}</td>
+                        <td>{{$consultancy->age}}</td>
                         <td>{{$consultancy->phone}}</td>
                         <td>{{$consultancy->state}}</td>
                         <td>{{$consultancy->residArea}}</td>
@@ -83,7 +83,7 @@
                               <input name="patientId" id="id" type="hidden" value="{{$consultancy->id}}">
                               <h4 class="text-danger text-center">CARD NUMBER:{{$consultancy->id}}</h4>
                               <span>{{$consultancy->fName}}</span>&nbsp;<span>{{$consultancy->mName}}</span>&nbsp;{{$consultancy->lName}}<hr>
-                              <span>{{$consultancy->email}}</span><hr>
+                              <span>{{$consultancy->age}}</span><hr>
                               <span>{{$consultancy->phone}}</span><hr>
                               <span>{{$consultancy->state}}</span><hr>
                               <span>{{$consultancy->residArea}}</span><hr>

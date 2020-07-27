@@ -50,7 +50,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item has-treeview">
+          {{-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="fas fa-users"></i>
               <p>
@@ -72,16 +72,16 @@
                 </a>
               </li>
             </ul>
-          </li>
-          <li class="nav-item">
+          </li> --}}
+          {{-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fas fa-id-card-alt"></i>
               <p>
                 Contact Us
               </p>
             </a>
-          </li>
-          <li class="nav-item has-treeview">
+          </li> --}}
+          {{-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="fas fa-money-bill-alt"></i>
               <p>
@@ -115,7 +115,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> --}}
           <li class="nav-item">
               <a class="nav-link" href="{{ route('logout') }}"
               onclick="event.preventDefault();

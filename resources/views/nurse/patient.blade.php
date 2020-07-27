@@ -210,7 +210,7 @@
         </button>
       </div>
 <div class="modal-body mx-3">
-  <form method="POST" action="/add-patient" role="form" id="patientForm">
+  <form method="POST" action="/add-patient" role="form" id="addPatientForm">
     @csrf
          <div class="md-form mb-4">
             
@@ -296,7 +296,7 @@
 
 </div>
 <div class="modal-footer d-flex justify-content-center">
-<button class="btn btn-default" type="submit" form="patientForm">Add<i class="fas fa-paper-plane-o ml-1"></i></button>
+<button class="btn btn-default" type="submit" form="addPatientForm">Add<i class="fas fa-paper-plane-o ml-1"></i></button>
 </div>
 </div>
 </div>

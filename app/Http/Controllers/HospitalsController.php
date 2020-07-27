@@ -35,8 +35,11 @@ class HospitalsController extends Controller
         foreach ($hospitals as $key => $hospital) {
          $displayHospital = $hospital->hName;
         }
+        $result=array(
+          'displayHospital'=>$displayHospital
+        );
         
-        return view('hospital.index')->with('displayHospital',$displayHospital);
+        return view('hospital.index')->with('result',$result);
     }
 
     /**
@@ -106,7 +109,7 @@ class HospitalsController extends Controller
     }
     public function personel()
     {
-      $personels = User::orderBy('created_at','DESC')->paginate(20);
+      $personels = User::where('hId',Auth::user()->hId)->orderBy('created_at','DESC')->paginate(20);
       $departments = Department::all();
       $id = Auth::user()->id;
         $role = 'admin';
@@ -131,7 +134,7 @@ class HospitalsController extends Controller
     }
     public function patient_hospital()
     {
-      $patients = User::orderBy('created_at','DESC')->paginate(20);
+      $patients = Patient::where('hId',Auth::user()->hId)->orderBy('created_at','DESC')->paginate(20);
       $id = Auth::user()->id;
       $role = 'admin';
       $hospitals = DB::table('hospitals')
@@ -150,7 +153,7 @@ class HospitalsController extends Controller
         'patients'=>$patients,
         'displayHospital'=>$displayHospital
       );
-      return view('hospital.add_patient')->with('$result',$result);
+      return view('hospital.add_patient')->with('result',$result);
     }
     public function department()
     {
@@ -219,23 +222,21 @@ class HospitalsController extends Controller
         'phone'=>'required',
         'state'=>'required',
         'residArea'=>'required',
-        'password'=>'required',
+        'gender'=>'required',
       ]);
-      $password = $request->input('password');
-      $cpassword = $request->input('password');
-      if ($password != $cpassword) {
-          return back()->with('error','Password do not match!');
-      }
+     
       
-      $post = new User();
-      $post-> fName = $request->input('fName');
-      $post-> mName = $request->input('mName');
-      $post-> lName = $request->input('lName');
-      $post-> age = $request->input('age');
-      $post-> phone = $request->input('phone');
-      $post-> state = $request->input('state');
-      $post-> residArea = $request->input('residArea');
-      $post-> password = Hash::make($password);
+          $post = new Patient();
+          $post-> fName = $request->input('fName');
+          $post-> mName = $request->input('mName');
+          $post-> lName = $request->input('lName');
+          $post-> age = $request->input('age');
+          $post-> phone = $request->input('phone');
+          $post-> residArea = $request->input('residArea');
+          $post-> state = $request->input('state');
+          $post-> gender = $request->input('gender');
+          $post-> status = "0";
+          $post-> hId = Auth::user()->hId;
       $post->save();
       return back()->with('success','Patient added successfully!');
     }

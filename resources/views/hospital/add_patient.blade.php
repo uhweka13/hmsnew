@@ -47,7 +47,7 @@
                           <tr>
                           <th>ID</th>
                           <th>Names</th>
-                          <th>Age</th>
+                          <th>D.O.B</th>
                           <th>Gender</th>
                           <th>Phone Number</th>
                           <th>State</th>
@@ -61,7 +61,7 @@
                         <tr>
                         <td>{{$patient->id}}</td>                      
                          <td>{{$patient->fName}}{{$patient->mName}}{{$patient->lName}}</td>
-                        <td>{{$patient->email}}</td>
+                        <td>{{$patient->age}}</td>
                         <td>{{$patient->gender}}</td>
                         <td>{{$patient->phone}}</td>
                         <td>{{$patient->state}}</td>
@@ -151,20 +151,64 @@
         </div>
         <div class="md-form mb-4">
             <select name="state" id="" class="form-control form-control-sm validated">
-                <option value="" disabled selected>Choose role</option>
-                <option value="doctor">Doctor</option>
-                <option value="Nurse">Nurse</option>
-                <option value="pharmacy">Pharmcy</option>
-                <option value="other">other</option>
+                <option value="" disabled selected>Choose State</option>
+                <option value="Abia">Abia Umuahia</option>
+                      <option value="Adamawa">Adamawa Yola</option>
+                      <option value="Akwa Ibom">Akwa Ibom Uyo</option>
+                      <option value="Anambra">Anambra Awka</option>
+                      <option value="Bauchi">Bauchi Bauchi</option>
+                      <option value="Bayelsa">Bayelsa Yenagoa</option>
+                      <option value="Benue">Benue Makurdi</option>
+                      <option value="Borno">Borno Maiduguri</option>
+                      <option value="Cross">Cross River Calabar</option>
+                      <option value="Delta">Delta Asaba</option>
+                      <option value="Ebonyi">Ebonyi Abakaliki</option>
+                      <option value="Edo">Edo Benin City</option>
+                      <option value="Ekiti">Ekiti Ado - Ekiti</option>
+                      <option value="Enugu">Enugu Enugu</option>
+                      <option value="Gombe">Gombe Gombe	</option>
+                      <option value="Imo">Imo Owerri</option>
+                      <option value="Abia">Abia Umuahia</option>
+                      <option value="Adamawa">Adamawa Yola</option>
+                      <option value="Akwa">Akwa Ibom Uyo</option>
+                      <option value="Anambra">Anambra Awka</option>
+                      <option value="Bauchi">Bauchi Bauchi</option>
+                      <option value="Jigawa">Jigawa Dutse</option>
+                      <option value="Kaduna">Kaduna Kaduna</option>
+                      <option value="Kano">Kano Kano</option>
+                      <option value="Katsina">Katsina Katsina</option>
+                      <option value="Kebbi">Kebbi Birnin Kebbi</option>
+                      <option value="Kogi">Kogi	Lokoja</option>
+                      <option value="Kwara">Kwara Ilorin</option>
+                      <option value="Lagos">Lagos Ikeja</option>
+                      <option value="Nasarawa">Nasarawa Lafia</option>
+                      <option value="Ogun">Ogun Abeokuta</option>
+                      <option value="Ondo">Ondo Akure</option>
+                      <option value="Osun">Osun Oshogbo</option>
+                      <option value="Oyo">Oyo Ibadan</option>
+                      <option value="Plateau">Plateau Jos</option>
+                      <option value="Rivers">Rivers Port Harcourt</option>
+                      <option value="Sokoto">Sokoto Sokoto</option>
+                      <option value="Taraba">Taraba Jalingo</option>
+                      <option value="Yobe">Yobe Damaturu</option>
+                      <option value="Zamfara">Zamfara Gusau</option>
+                      <option value="Abuja">Abuja FCT</option>
             </select>
         </div>
-        
-          <div class="md-form mb-4">
+        <div class="md-form mb-4">
+          <select name="gender" id="" class="form-control form-control-sm validated">
+              <option value="" disabled selected>Choose Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+          </select>
+      </div>
+          {{-- <div class="md-form mb-4">
                     <input type="password" id="form3" name="password" class="form-control form-control-sm validate" placeholder="Password">
             </div>
             <div class="md-form mb-4">
                     <input type="password" id="form3" name="confirmPassword" class="form-control form-control-sm validate" placeholder="Comfirmpassword">
-            </div>
+            </div> --}}
   </form>
 
 </div>
