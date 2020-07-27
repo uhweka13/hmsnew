@@ -1,5 +1,9 @@
 /*!
+<<<<<<< HEAD
+ *   AdminLTE v3.0.2
+=======
  *   AdminLTE v3.0.2-pre
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
  *     Only Pages
  *   Author: Colorlib
  *   Website: AdminLTE.io <http://adminlte.io>
@@ -214,6 +218,10 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   align-items: center;
   background: #e9ecef;
   display: flex;
+<<<<<<< HEAD
+  flex-direction: column;
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
   height: 100vh;
   justify-content: center;
 }

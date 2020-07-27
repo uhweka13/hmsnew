@@ -13,6 +13,30 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+  <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{{ asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+  <!-- JQVMap -->
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="{{ asset('../../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="{{ asset('../../plugins/toastr/toastr.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('plugins/jqvmap/jqvmap.min.css') }}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{{ asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
+  <!-- summernote -->
+  <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css') }}">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body>
 
@@ -73,7 +97,7 @@
 
        
         <!-- Jumbotron -->
-            <div class="jumbotron p-0">
+            <div class="jumbotron p-0" style="height: 400px; background-image: url('img/headbackhms.png'); background-size: 100%; background-repeat: no-repeat; background-color: #fff;">
 
                 <!-- Card image -->
                 <div class="view overlay rounded-top">
@@ -87,11 +111,11 @@
                 <div class="card-body text-center mb-3">
             
                 <!-- Title -->
-                <h3 class="card-title h3 my-4"><strong>Card title</strong></h3>
+                <h3 class="h3 my-4"><strong>Hospital Management System</strong></h3>
                 <!-- Text -->
-                <p class="card-text py-2">Some quick example text to build on the card title and make up the bulk of the card's</p>
+                <p class="card-text py-2">Manage medical facilities all in one place.</p>
                 <!-- Button -->
-                <a href="#" class="btn purple-gradient btn-rounded mb-4">Button</a>
+                <button type="button" style="border-radius: 50px;" class="btn btn-outline-secondary btn-rounded waves-effect">Getting Started</button>
             
                 </div>
             
@@ -101,135 +125,185 @@
     <div class="container-fluid">
         <h4 class="text-center py-4">Two equal columns layout</h4>
 
-<!-- Grid row -->
-<div class="row">
+    <!-- Grid row -->
+    <div class="row">
 
-  <!-- Grid column -->
-  <div class="col-md-6 mb-4">
+      <!-- Grid column -->
+      <div class="col-md-6 mb-4">
 
-    <!--Card-->
-    <div class="card default-color-dark">
+        <!--Card-->
+        <div class="card default-color-dark">
 
-      <!--Card image-->
-      <div class="view">
-        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg" class="card-img-top" alt="photo">
-        <a href="#">
-          <div class="mask rgba-white-slight"></div>
-        </a>
+          <!--Card image-->
+          <div class="view">
+            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg" class="card-img-top" alt="photo">
+            <a href="#">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+          <!--Card content-->
+          <div class="card-body text-center">
+            <!--Title-->
+            <h4 class="card-title white-text">News title</h4>
+            <!--Text-->
+            <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+              quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+            <a href="#" class="btn btn-outline-white btn-md waves-effect">Button</a>
+          </div>
+
+        </div>
+        <!--/.Card-->
+
       </div>
+      <!-- Grid column -->
 
-      <!--Card content-->
-      <div class="card-body text-center">
-        <!--Title-->
-        <h4 class="card-title white-text">News title</h4>
-        <!--Text-->
-        <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-          quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
-        <a href="#" class="btn btn-outline-white btn-md waves-effect">Button</a>
+      <!-- Grid column -->
+      <div class="col-md-6 mb-4">
+
+        <!--Card-->
+        <div class="card primary-color-dark">
+
+          <!--Card image-->
+          <div class="view">
+            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(122).jpg" class="card-img-top" alt="photo">
+            <a href="#">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+          <!--Card content-->
+          <div class="card-body text-center">
+            <!--Title-->
+            <h4 class="card-title white-text">News title</h4>
+            <!--Text-->
+            <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+              quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+            <a href="#" class="btn btn-outline-white btn-md waves-effect">Button</a>
+          </div>
+
+        </div>
+        <!--/.Card-->
+
       </div>
+      <!-- Grid column -->
 
     </div>
-    <!--/.Card-->
+    <!-- Grid row -->
 
-  </div>
-  <!-- Grid column -->
+    <h4 class="text-center py-4">Three equal columns layout</h4>
 
-  <!-- Grid column -->
-  <div class="col-md-6 mb-4">
+    <!-- Grid row -->
+    <div class="row">
 
-    <!--Card-->
-    <div class="card primary-color-dark">
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-12 mb-4">
 
-      <!--Card image-->
-      <div class="view">
-        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(122).jpg" class="card-img-top" alt="photo">
-        <a href="#">
-          <div class="mask rgba-white-slight"></div>
-        </a>
+        <!--Card Primary-->
+        <div class="card mdb-color text-center z-depth-2">
+          <div class="card-body">
+            <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"><strong>First column</strong></h3>
+            <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis
+              suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit
+              qui in ea voluptate non proident velit esse quam. </p>
+          </div>
+        </div>
+        <!--/.Card Primary-->
+
       </div>
+      <!-- Grid column -->
 
-      <!--Card content-->
-      <div class="card-body text-center">
-        <!--Title-->
-        <h4 class="card-title white-text">News title</h4>
-        <!--Text-->
-        <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-          quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
-        <a href="#" class="btn btn-outline-white btn-md waves-effect">Button</a>
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-6 mb-4">
+
+        <!--Card Primary-->
+        <div class="card red darken-4 text-center z-depth-2">
+          <div class="card-body">
+            <h3 class="text-uppercase font-weight-bold light-green-text mt-2 mb-3"><strong>Second column</strong></h3>
+            <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis
+              suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit
+              qui in ea voluptate non proident velit esse quam. </p>
+          </div>
+        </div>
+        <!--/.Card Primary-->
+
       </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-6 mb-4">
+
+        <!--Card Primary-->
+        <div class="card light-blue darken-1 text-center z-depth-2">
+          <div class="card-body">
+            <h3 class="text-uppercase font-weight-bold purple-text mt-2 mb-3"><strong>Third column</strong></h3>
+            <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis
+              suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit
+              qui in ea voluptate non proident velit esse quam. </p>
+          </div>
+        </div>
+        <!--/.Card Primary-->
+
+      </div>
+      <!-- Grid column -->
 
     </div>
-    <!--/.Card-->
-
-  </div>
-  <!-- Grid column -->
-
-</div>
-<!-- Grid row -->
-
-<h4 class="text-center py-4">Three equal columns layout</h4>
-
-<!-- Grid row -->
-<div class="row">
-
-  <!-- Grid column -->
-  <div class="col-lg-4 col-md-12 mb-4">
-
-    <!--Card Primary-->
-    <div class="card mdb-color text-center z-depth-2">
-      <div class="card-body">
-        <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"><strong>First column</strong></h3>
-        <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis
-          suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit
-          qui in ea voluptate non proident velit esse quam. </p>
-      </div>
-    </div>
-    <!--/.Card Primary-->
-
-  </div>
-  <!-- Grid column -->
-
-  <!-- Grid column -->
-  <div class="col-lg-4 col-md-6 mb-4">
-
-    <!--Card Primary-->
-    <div class="card red darken-4 text-center z-depth-2">
-      <div class="card-body">
-        <h3 class="text-uppercase font-weight-bold light-green-text mt-2 mb-3"><strong>Second column</strong></h3>
-        <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis
-          suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit
-          qui in ea voluptate non proident velit esse quam. </p>
-      </div>
-    </div>
-    <!--/.Card Primary-->
-
-  </div>
-  <!-- Grid column -->
-
-  <!-- Grid column -->
-  <div class="col-lg-4 col-md-6 mb-4">
-
-    <!--Card Primary-->
-    <div class="card light-blue darken-1 text-center z-depth-2">
-      <div class="card-body">
-        <h3 class="text-uppercase font-weight-bold purple-text mt-2 mb-3"><strong>Third column</strong></h3>
-        <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis
-          suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit
-          qui in ea voluptate non proident velit esse quam. </p>
-      </div>
-    </div>
-    <!--/.Card Primary-->
-
-  </div>
-  <!-- Grid column -->
-
-</div>
-<!-- Grid row -->
+    <!-- Grid row -->
 
 
     </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small teal pt-4">
+
+      <!-- Footer Text -->
+      <div class="container-fluid text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+
+            <!-- Content -->
+            <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil
+              repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae
+              harum esse fugiat. Itaque, culpa?</p>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none pb-3">
+
+          <!-- Grid column -->
+          <div class="col-md-6 mb-md-0 mb-3">
+
+            <!-- Content -->
+            <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum
+              commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id
+              excepturi hic.</p>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Footer Text -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href=""> HMS</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
 
 
     

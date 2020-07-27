@@ -15,9 +15,15 @@ use Illuminate\Support\Facades\Route;
 // Pages routes
 Route::post('/login_control','LoginController@login_control');
 Route::get('/', 'PagesController@index');
+
+Route::get('/super', 'SuperAdminController@index');
+
+Route::get('/order', 'SuperAdminController@order');
+
 Route::get('/intro', 'PagesController@intro');
 Route::post('/add-hospital', 'PagesController@addHospital');
 Route::post('/uploadProfileImage', 'PagesController@uploadProfileImg');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -416,4 +416,14 @@
 
     return $block
   }
+<<<<<<< HEAD
+
+  $('.product-image-thumb').on('click', function() {
+    const image_element = $(this).find('img');
+    $('.product-image').prop('src', $(image_element).attr('src'))
+    $('.product-image-thumb.active').removeClass('active');
+    $(this).addClass('active');
+  });
+=======
+>>>>>>> 78e2e9d5e3247b3029124b078122b5d5208c496c
 })(jQuery)
