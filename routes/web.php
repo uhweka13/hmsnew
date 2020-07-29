@@ -19,6 +19,7 @@ Route::get('/', 'PagesController@index');
 Route::get('/super', 'SuperAdminController@index');
 
 Route::get('/order', 'SuperAdminController@order');
+Route::post('/approve', 'SuperAdminController@approve');
 
 Route::get('/intro', 'PagesController@intro');
 Route::post('/add-hospital', 'PagesController@addHospital');

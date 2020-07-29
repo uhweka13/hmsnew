@@ -42,13 +42,16 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-sign-out-alt"></i>
-              <p>
-                SignOut
-                {{-- <span class="right badge badge-danger">New</span> --}}
-              </p>
-            </a>
+            <a class="nav-link" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+               <i class="fas fa-sign-out-alt"></i>
+             {{ __('Logout') }}
+         </a>
+  
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+             @csrf
+         </form>
           </li>
 
 

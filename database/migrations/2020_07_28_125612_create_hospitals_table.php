@@ -21,7 +21,10 @@ class CreateHospitalsTable extends Migration
             $table->string('hPhone');
             $table->string('hState');
             $table->string('hWebsite');
+            $table->string('hEstablish');
             $table->string('hLocation');
+            $table->string('hStartDate')->nullable();
+            $table->string('hEndDate')->nullable();
             $table->string('hLogo');
             $table->string('hStatus');
             $table->timestamps();

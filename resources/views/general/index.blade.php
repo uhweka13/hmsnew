@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Home</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
@@ -44,7 +44,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark primary-color">
 
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="/">FlandCare</a>
     
         <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -58,7 +58,7 @@
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+            <a class="nav-link" href="/">Home
                 <span class="sr-only">(current)</span>
             </a>
             </li>
@@ -72,11 +72,11 @@
             <!-- Dropdown -->
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                aria-haspopup="true" aria-expanded="false">Hospital</a>
             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">In progress</a>
+                <a class="dropdown-item" href="#">In progress</a>
+                <a class="dropdown-item" href="#">In progress</a>
             </div>
             </li>
     
@@ -115,7 +115,7 @@
                 <!-- Text -->
                 <p class="card-text py-2">Manage medical facilities all in one place.</p>
                 <!-- Button -->
-                <button type="button" style="border-radius: 50px;" class="btn btn-outline-secondary btn-rounded waves-effect">Getting Started</button>
+                <a href="/login" style="border-radius: 50px;" class="btn btn-outline-secondary btn-rounded waves-effect">Getting Started</a>
             
                 </div>
             
@@ -123,7 +123,7 @@
             <!-- Jumbotron -->
     </div>
     <div class="container-fluid">
-        <h4 class="text-center py-4">Two equal columns layout</h4>
+        <h4 class="text-uppercase font-weight-bold text-center">ABOUT US</h4>
 
     <!-- Grid row -->
     <div class="row">
@@ -135,8 +135,8 @@
         <div class="card default-color-dark">
 
           <!--Card image-->
-          <div class="view">
-            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg" class="card-img-top" alt="photo">
+          <div class="view" style="height: 300px; background-image: url('img/health.png'); background-size: 100%; background-repeat: no-repeat; background-color: #fff;">
+            {{-- <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg" class="card-img-top" alt="photo"> --}}
             <a href="#">
               <div class="mask rgba-white-slight"></div>
             </a>
@@ -145,12 +145,12 @@
           <!--Card content-->
           <div class="card-body text-center">
             <!--Title-->
-            <h4 class="card-title white-text">News title</h4>
-            <!--Text-->
-            <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-              quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
-            <a href="#" class="btn btn-outline-white btn-md waves-effect">Button</a>
+             <!--Title-->
+             <h4 class="card-title white-text">MISSION</h4>
+             <!--Text-->
+             <p class="card-text white-text">To make Health Facilities readily available to people and to ease communications between health institutions 
+               and Patients easily by leveraging on technology</p>
+            <a href="#" class="btn btn-outline-white btn-md waves-effect">MORE</a>
           </div>
 
         </div>
@@ -166,8 +166,8 @@
         <div class="card primary-color-dark">
 
           <!--Card image-->
-          <div class="view">
-            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(122).jpg" class="card-img-top" alt="photo">
+          <div class="view" style="height: 300px; background-image: url('img/health3.jpg'); background-size: 100%; background-repeat: no-repeat; background-color: #fff;">
+            {{-- <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(122).jpg" class="card-img-top" alt="photo"> --}}
             <a href="#">
               <div class="mask rgba-white-slight"></div>
             </a>
@@ -176,12 +176,10 @@
           <!--Card content-->
           <div class="card-body text-center">
             <!--Title-->
-            <h4 class="card-title white-text">News title</h4>
+            <h4 class="card-title white-text">VISION</h4>
             <!--Text-->
-            <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-              quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
-            <a href="#" class="btn btn-outline-white btn-md waves-effect">Button</a>
+            <p class="card-text white-text">To provide global health solution without compromising standards</p>
+            <a href="#" class="btn btn-outline-white btn-md waves-effect">MORE</a>
           </div>
 
         </div>
@@ -193,7 +191,7 @@
     </div>
     <!-- Grid row -->
 
-    <h4 class="text-center py-4">Three equal columns layout</h4>
+    <h4 class="text-uppercase font-weight-bold text-center">OUR SERVICES</h4>
 
     <!-- Grid row -->
     <div class="row">
@@ -204,10 +202,8 @@
         <!--Card Primary-->
         <div class="card mdb-color text-center z-depth-2">
           <div class="card-body">
-            <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"><strong>First column</strong></h3>
-            <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis
-              suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit
-              qui in ea voluptate non proident velit esse quam. </p>
+            <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"><strong>LABORATORIES</strong></h3>
+            <p class="white-text mb-0">We have standard Laboratories that can cater for all your tests</p>
           </div>
         </div>
         <!--/.Card Primary-->
@@ -221,10 +217,8 @@
         <!--Card Primary-->
         <div class="card red darken-4 text-center z-depth-2">
           <div class="card-body">
-            <h3 class="text-uppercase font-weight-bold light-green-text mt-2 mb-3"><strong>Second column</strong></h3>
-            <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis
-              suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit
-              qui in ea voluptate non proident velit esse quam. </p>
+            <h3 class="text-uppercase font-weight-bold light-green-text mt-2 mb-3"><strong>X-RAY/SCANNING</strong></h3>
+            <p class="white-text mb-0">Good and standard x-Ray and Scannings</p>
           </div>
         </div>
         <!--/.Card Primary-->
@@ -238,10 +232,8 @@
         <!--Card Primary-->
         <div class="card light-blue darken-1 text-center z-depth-2">
           <div class="card-body">
-            <h3 class="text-uppercase font-weight-bold purple-text mt-2 mb-3"><strong>Third column</strong></h3>
-            <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis
-              suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit
-              qui in ea voluptate non proident velit esse quam. </p>
+            <h3 class="text-uppercase font-weight-bold purple-text mt-2 mb-3"><strong>AMBULANCE SERVICES</strong></h3>
+            <p class="white-text mb-0">We provide good Ambulance Services</p>
           </div>
         </div>
         <!--/.Card Primary-->
@@ -251,7 +243,56 @@
 
     </div>
     <!-- Grid row -->
+ <!-- Grid row -->
+ <div class="row">
 
+  <!-- Grid column -->
+  <div class="col-lg-4 col-md-12 mb-4">
+
+    <!--Card Primary-->
+    <div class="card mdb-color text-center z-depth-2">
+      <div class="card-body">
+        <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"><strong>SPECIALIST HOSPITAL</strong></h3>
+        <p class="white-text mb-0">You have access to tertiary hospitals here </p>
+      </div>
+    </div>
+    <!--/.Card Primary-->
+
+  </div>
+  <!-- Grid column -->
+
+  <!-- Grid column -->
+  <div class="col-lg-4 col-md-6 mb-4">
+
+    <!--Card Primary-->
+    <div class="card red darken-4 text-center z-depth-2">
+      <div class="card-body">
+        <h3 class="text-uppercase font-weight-bold light-green-text mt-2 mb-3"><strong>CLINIC</strong></h3>
+        <p class="white-text mb-0">We Provide bother primary and secondary healthcare </p>
+      </div>
+    </div>
+    <!--/.Card Primary-->
+
+  </div>
+  <!-- Grid column -->
+
+  <!-- Grid column -->
+  <div class="col-lg-4 col-md-6 mb-4">
+
+    <!--Card Primary-->
+    <div class="card light-blue darken-1 text-center z-depth-2">
+      <div class="card-body">
+        <h3 class="text-uppercase font-weight-bold purple-text mt-2 mb-3"><strong>PHARMACY</strong></h3>
+        <p class="white-text mb-0">Get Drugs from trusted Phamacies around the globe </p>
+      </div>
+    </div>
+    <!--/.Card Primary-->
+
+  </div>
+  <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
 
     </div>
 
@@ -265,30 +306,15 @@
         <div class="row">
 
           <!-- Grid column -->
-          <div class="col-md-6 mt-md-0 mt-3">
+          <div class="col-md-12 mt-md-0 mt-3">
 
             <!-- Content -->
-            <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil
-              repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae
-              harum esse fugiat. Itaque, culpa?</p>
-
+            <h5 class="text-uppercase font-weight-bold text-center">Address</h5>
+            <p class="text-center">No 3 Daholpya, Along Abuja Road, 
+              Jos South, Plateau State</p>
+              <h6 class="text-uppercase font-weight-bold text-center">Email:flandcarecall@gmail.com</h6>
+              <h6 class="text-uppercase font-weight-bold text-center">Phone Number: 07082886732</h6>
           </div>
-          <!-- Grid column -->
-
-          <hr class="clearfix w-100 d-md-none pb-3">
-
-          <!-- Grid column -->
-          <div class="col-md-6 mb-md-0 mb-3">
-
-            <!-- Content -->
-            <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum
-              commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id
-              excepturi hic.</p>
-
-          </div>
-          <!-- Grid column -->
 
         </div>
         <!-- Grid row -->
@@ -298,7 +324,7 @@
 
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href=""> HMS</a>
+        <a href="">FlandCare</a>
       </div>
       <!-- Copyright -->
 

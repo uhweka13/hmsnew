@@ -19,13 +19,18 @@ class LoginController extends Controller
             $slug = User::where('email',$request->email)->first();
             
             
-            if ($slug->role === "admin") {
+            if ($slug->role === "admin" && $slug->status ==="Approved") {
                 return redirect('/hospital-index');
             }
             else if ($slug->role === "doctor") {
                 return redirect('/doctor-index');
             }else if ($slug->role === "Nurse") {
                 return redirect('/nurse-index');
+            }else if ($slug->role === "super") {
+                return redirect('/super');
+            }
+            else if ($slug->role === "admin" && $slug->status === "Pending") {
+                return redirect('/intro');
             }
             
         }

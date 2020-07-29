@@ -53,7 +53,7 @@ class PagesController extends Controller
        $post-> hLocation = $request->input('hLocation');
        $post-> hState = $request->input('hState');
        $post-> hLogo =  $fileNameToStore;
-       $post-> hStatus =  0;
+       $post-> hStatus =  'Pending';
        $post->save();
 
        $email = Hospital::where('hEmail',$hEmail)->get();
@@ -62,6 +62,7 @@ class PagesController extends Controller
        $updateUserTable = User::find(Auth::user()->id);
        $updateUserTable-> hId = $hId;
        $updateUserTable-> role = 'admin';
+       $updateUserTable-> status = 'Pending';
        $updateUserTable->save();
        return back()->with('success','Hospital added successfully');
     }
