@@ -6,7 +6,7 @@
                       <!-- Default form register -->
                 <form class="text-center border border-light p-5" method="POST" action="/login_control">
                     @csrf
-                    <p class="h4 mb-4">Sign up</p>
+                    <p class="h4 mb-4">Sign In</p>
                             <!-- Email Address-->
                             <div class="form-group" style="display: flex; flex-direction: row;">
                                 <button class="btn-sm" style="border: none; background-color: transparent; border-top: 1px solid rgb(194, 190, 190); border-bottom: 1px solid rgb(194, 190, 190); border-left: 1px solid rgb(194, 190, 190); border-radius: 0px;" disabled><i class="far fa-envelope"></i></button>

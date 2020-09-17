@@ -156,7 +156,8 @@
                 <option value="doctor">Doctor</option>
                 <option value="Nurse">Nurse</option>
                 <option value="pharmacy">Pharmacy</option>
-                <option value="other">other</option>
+                <option value="Clerk">Clerk</option>
+                <option value="Others">Others</option>
             </select>
         </div>
         <div class="md-form mb-4">

@@ -11,7 +11,7 @@
   
   <li class="nav-item">
     <a class="nav-link" id="pills-addhospital-tab" data-toggle="pill" href="#pills-addhospital" role="tab"
-      aria-controls="pills-contact" aria-selected="false">Want to add school?</a>
+      aria-controls="pills-contact" aria-selected="false">Want to add Hospital?</a>
   </li>
 </ul>
 <div class="tab-content pt-2 pl-1" id="pills-tabContent">
@@ -53,7 +53,7 @@
       for verification
     </p>
     <hr>
-    <p class="mb-0">You will be notifify shortly after verification! Below is your system Id make sure you send it to the admin..</p>
+    <p class="mb-0">You will be notify shortly after verification! Below is your system Id make sure you send it to the admin...</p>
   </div>
   <p class="text-danger"><strong>System Number: {{Auth::user()->id}}</strong></p>
   @else

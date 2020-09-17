@@ -8,39 +8,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Tempusdominus Bbootstrap 4 -->
-    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-    <!-- JQVMap -->
-    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
-    <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-    <!-- summernote -->
-    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    <!-- Google Fonts Roboto -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="{{asset('css/mdb.min.css')}}">
-    <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">
+    <!-- Font Awesome --> 
+<link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
+<!-- Ionicons -->
+<link rel="stylesheet" href="{{asset('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">
+<!-- Tempusdominus Bbootstrap 4 -->
+<link rel="stylesheet" href="{{asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+<!-- iCheck -->
+<link rel="stylesheet" href="{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+<!-- JQVMap -->
+<link rel="stylesheet" href="{{asset('plugins/jqvmap/jqvmap.min.css')}}">
+<link rel="stylesheet" href="{{asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+<!-- iCheck -->
+<link rel="stylesheet" href="{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+<!-- JQVMap -->
+<link rel="stylesheet" href="{{asset('plugins/jqvmap/jqvmap.min.css')}}">
+<link rel="stylesheet" href="{{asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+<!-- iCheck -->
+<link rel="stylesheet" href="{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+<!-- JQVMap -->
+<link rel="stylesheet" href="{{asset('plugins/jqvmap/jqvmap.min.css')}}">
+<link rel="stylesheet" href="{{asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+<!-- iCheck -->
+<link rel="stylesheet" href="{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+<!-- JQVMap -->
+<link rel="stylesheet" href="{{asset('plugins/jqvmap/jqvmap.min.css')}}">
+<link rel="stylesheet" href="{{asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+<!-- iCheck -->
+<link rel="stylesheet" href="{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+<!-- JQVMap -->
+<link rel="stylesheet" href="{{asset('plugins/jqvmap/jqvmap.min.css')}}">
+<link rel="stylesheet" href="{{asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+<!-- iCheck -->
+<link rel="stylesheet" href="{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+<!-- JQVMap -->
+<link rel="stylesheet" href="{{asset('plugins/jqvmap/jqvmap.min.css')}}">
+<link rel="stylesheet" href="{{asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+<!-- iCheck -->
+<link rel="stylesheet" href="{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+<!-- JQVMap -->
+<link rel="stylesheet" href="{{asset('plugins/jqvmap/jqvmap.min.css')}}">
+<!-- Theme style -->
+<link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
+<!-- overlayScrollbars -->
+<link rel="stylesheet" href="{{asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
+<!-- Daterange picker -->
+<link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
+<!-- summernote -->
+<link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.css')}}">
+<!-- Google Font: Source Sans Pro -->
+{{-- <link href="{{asset('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700')}}" rel="stylesheet">
+<link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon"> --}}
+<!-- Font Awesome -->
+{{-- <link rel="stylesheet" href="{{asset('https://use.fontawesome.com/releases/v5.11.2/css/all.css')}}"> --}}
+<!-- Google Fonts Roboto -->
+{{-- <link rel="stylesheet" href="{{asset('ttps://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap')}}"> --}}
+<!-- Bootstrap core CSS -->
+{{-- <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"> --}}
+<!-- Material Design Bootstrap -->
+<link rel="stylesheet" href="{{asset('css/mdb.min.css')}}">
+<!-- Your custom styles (optional) -->
+<link rel="stylesheet" href="{{asset('css/style.css')}}">
+<!-- Chat CSS -->
+{{-- <link href="{{asset('css/addons-pro/chat.css')}}" rel="stylesheet"> --}}
+<!-- Chat CSS - minified-->
+{{-- <link href="{{asset('css/addons-pro/chat.min.css')}}" rel="stylesheet"> --}}
+<!-- jQuery -->
+
+<script src="plugins/jquery/jquery.min.js"></script>
   </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -96,17 +131,6 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
- 
-  <!-- jQuery -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
-  <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+
 </body>
 </html>

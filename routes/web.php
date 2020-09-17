@@ -13,9 +13,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Pages routes
+Route::get('/', function () {
+    if (Auth::guest()) {
+        return view('general.index');
+        
+    }
+    else {
+        if (Auth::user()->role === "admin" && Auth::user()->status ==="Approved") {
+            return redirect('/hospital-index');
+        }
+        else if (Auth::user()->role === "doctor") {
+            return redirect('/doctor-index');
+        }else if (Auth::user()->role === "Nurse") {
+            return redirect('/nurse-index');
+        }else if (Auth::user()->role === "super") {
+            return redirect('/super');
+        }else if (Auth::user()->role === "Clerk") {
+            return redirect('/clerk-index');
+        }
+        else if (Auth::user()->role === "admin" && Auth::user()->status === "Pending") {
+            return redirect('/intro');
+        } 
+    }
+    
+    
+});
 Route::post('/login_control','LoginController@login_control');
-Route::get('/', 'PagesController@index');
-
 Route::get('/super', 'SuperAdminController@index');
 
 Route::get('/order', 'SuperAdminController@order');
@@ -50,3 +73,11 @@ Route::post('/booking', 'nurseController@booking');
 Route::post('/delete-patient-nurse', 'nurseController@deletePatient');
 Route::get('/nurse-consultancy', 'nurseController@consultancy');
 Route::post('/update-patient-nurse', 'nurseController@updatePatient');
+Route::post('/patient-vital', 'nurseController@patientVitals');
+
+//Clerk Controller
+Route::resource('/add-patient-clerk', 'clerksController');
+Route::get('/patient-clerk', 'clerksController@patient');
+Route::post('/update-patient-clerk', 'clerksController@updatePatient');
+Route::post('/delete-patient-clerk', 'clerksController@deletePatient');
+Route::resource('/clerk-index', 'clerksController');

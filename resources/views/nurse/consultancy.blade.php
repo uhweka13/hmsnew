@@ -70,6 +70,9 @@
                         <button data-toggle="modal" data-target="#booking{{$consultancy->id}}">
                           <i class="fas fa-eye text-green"></i>
                           </button>
+                          <button data-toggle="modal" data-target="#vital{{$consultancy->id}}">
+                            <i class="fas fa-eye text-blue"></i>
+                            </button>
                         </td>
                      <!-- Booking modal-->
                      <div class="modal fade" id="booking{{$consultancy->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -97,6 +100,52 @@
                       </div>
                     </div>
                     <!-- Delete News modal -->
+
+                     <!-- Edit Patient's records -->
+                  <div class="modal fade" id="vital{{$consultancy->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header text-center">
+                          <h4 class="modal-title w-100 font-weight-bold">Patient Vital</h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                  <div class="modal-body mx-3">
+                    <form method="POST" action="/patient-vital" role="form" id="patientVital">
+                      @csrf
+                          <div class="md-form mb-4">
+                          <input type="hidden" name="patientId" value="{{$consultancy->id}}">
+                          <input type="text" id="form3" name="temp" class="form-control form-control-sm validate" placeholder="Body Temperature">
+                          </div>
+                          <div class="md-form mb-4">
+                              <input type="text" id="form3" name="respo" class="form-control form-control-sm validate" placeholder="Repository Rate">
+                          </div>
+                          <div class="md-form mb-4">
+                              <input type="text" id="form3" name="pressure" class="form-control form-control-sm validate" placeholder="Blood Pressure">
+                          </div>
+                          <div class="md-form mb-4">
+                            <input type="text" id="form3" name="pulse" class="form-control form-control-sm validate" placeholder="Pulse Rate">                     
+                           </div>
+                           <div class="md-form mb-4">
+                            <textarea name="note" id="note" class="form-control" placeholder="Note..."></textarea>                    
+                           </div>
+                            {{-- <div class="md-form mb-4">
+                                      <input type="password" id="form3" name="password" class="form-control form-control-sm validate" placeholder="Password">
+                              </div>
+                              <div class="md-form mb-4">
+                                      <input type="password" id="form3" name="confirmPassword" class="form-control form-control-sm validate" placeholder="Comfirmpassword">
+                              </div> --}}
+                    </form>
+    
+                      </div>
+                      <div class="modal-footer d-flex justify-content-center">
+                      <button class="btn btn-default" type="submit" form="patientVital">Proceed<i class="fas fa-paper-plane-o ml-1"></i></button>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
                         </tr>
                     </tbody>
                                             

@@ -158,4 +158,23 @@ class nurseController extends Controller
         $update->save();
         return back()->with('success','Patient updated successfully!');
     }
+    public function patientVitals(Request $request)
+    {
+        $this->validate($request,[
+            'temp'=>'required',
+            'respo'=>'required',
+            'pressure'=>'required',
+            'pulse'=>'required',
+            'note'=>'required',
+          ]);
+        $id = $request->input('patientId');
+        $update = Patient::find($id);
+        $update-> temp = $request->input('temp');
+        $update-> respo = $request->input('respo');
+        $update-> pressure = $request->input('pressure');
+        $update-> pulse = $request->input('pulse');
+        $update-> note = $request->input('note');
+        $update->save();
+        return back()->with('success','Patient Vitals added successfully!');
+    }
 }
