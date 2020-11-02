@@ -38,6 +38,30 @@ class clerksController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request,[
+            'fName'=>'required',
+            'mName'=>'required',
+            'lName'=>'required',
+            'age'=>'required',
+            'phone'=>'required',
+            'residArea'=>'required',
+            'state'=>'required',
+            'gender'=>'required',
+          ]);
+          
+          $post = new Patient();
+          $post-> fName = $request->input('fName');
+          $post-> mName = $request->input('mName');
+          $post-> lName = $request->input('lName');
+          $post-> age = $request->input('age');
+          $post-> phone = $request->input('phone');
+          $post-> residArea = $request->input('residArea');
+          $post-> state = $request->input('state');
+          $post-> gender = $request->input('gender');
+          $post-> status = "0";
+          $post-> hId = Auth::user()->hId;
+          $post->save();
+          return back()->with('success','Patient added successfully!');
     }
 
     /**
@@ -82,7 +106,7 @@ class clerksController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // 
     }
     public function patient()
     {
@@ -120,5 +144,15 @@ class clerksController extends Controller
         $update-> gender = $request->input('gender');
         $update->save();
         return back()->with('success','Patient updated successfully!');
+    }
+    public function payment()
+    {
+      $patients = Patient::where('hId', Auth::user()->hId)->orderBy('created_at','DESC')->paginate(20);
+      return view('clerk.payment')->with('patients',$patients);
+    }
+    public function records()
+    {
+      $patients = Patient::where('hId', Auth::user()->hId)->orderBy('created_at','DESC')->paginate(20);
+      return view('clerk.records')->with('patients',$patients);
     }
 }

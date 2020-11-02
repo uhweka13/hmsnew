@@ -1,4 +1,4 @@
-@extends('layouts.doctor_app')
+@extends('layouts.clerk_app')
 @section('content')
  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -12,8 +12,8 @@
               </div><!-- /.col -->
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                  <li class="breadcrumb-item"><a href="doctor-index">Home</a></li>
-                  <li class="breadcrumb-item active">Doctor</li>
+                  <li class="breadcrumb-item"><a href="admin-index">Home</a></li>
+                  <li class="breadcrumb-item active">Clerk</li>
                 </ol>
               </div><!-- /.col -->
             </div><!-- /.row -->
@@ -25,9 +25,10 @@
           <div class="container-fluid">
             <div class="row">
             <div class="col-12">
+                
                 <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Patient's records</h3>
+                    <h3 class="card-title">Patient Record</h3>
                     <div class="card-tools">
                     <div class="input-group input-group-sm" style="width: 150px;">
                         <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -40,57 +41,43 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body table-responsive p-0">
-                  @if (count($records) > 0)
+                  @if (count($patients ?? '') > 0)
                   <table class="table table-hover">
                       <thead>
                           <tr>
                           <th>Card No</th>
                           <th>Names</th>
-                          <th>Age</th>
-                          <th>Gender</th>
+                          <th>D.O.B</th>
                           <th>Phone Number</th>
-                          <th>State</th>
                           <th>Location</th>
+                          <th>Amount Paid</th>
+                          <th>Balance</th>
+                          <th>Satus</th>
                           <th>Action</th>
                           </tr>
                       </thead>
-                      @foreach ($records as $record)
+                      @foreach ($patients ?? '' as $patient)
+
                     <tbody>
                         <tr>
-                        <td>{{$record->id}}</td>                      
-                         <td>{{$record->fName}}&nbsp;{{$record->mName}}&nbsp;{{$record->lName}}</td>
-                        <td>{{$record->age}}</td>
-                        <td>{{$record->gender}}</td>
-                        <td>{{$record->phone}}</td>
-                        <td>{{$record->state}}</td>
-                        <td>{{$record->residArea}}</td>
-                        <td>
-                        <button data-toggle="modal" data-target="#display{{$record->id}}">
-                          <i class="fas fa-eye text-green"></i>
-                          </button>
+                        <td>{{$patient->id}}</td>                      
+                         <td>{{$patient->fName}}&nbsp;{{$patient->mName}}&nbsp;{{$patient->lName}}</td>
+                        <td>{{$patient->age}}</td>
+                        <td>{{$patient->phone}}</td>
+                        <td>{{$patient->residArea}}</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                       <td><button data-toggle="modal" data-target="#payBill{{$patient->id}}">
+                        <i class="fas fa-eye text-blue"></i>
+                        </button>
                         </td>
-                    <!-- Delete news modal-->
-                    <div class="modal fade" id="display{{$record->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                        aria-hidden="true">
-  
-                        <!-- Change class .modal-sm to change the size of the modal -->
-                        <div class="modal-dialog modal-md" role="document">
-  
-  
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h4>Patient's Diagnose</h4>
-                            </div>
-                            <div class="modal-body">
-                               <p>{{$record->diagnose}}</p>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
-                            </div> 
-                          </div>
-                        </div>
-                      </div>
-                      {{-- delete --}}
+                      </tbody>
+              </div>
+              </div>
+              </div>
+              </div>
+
                         </tr>
                     </tbody>
                                             
@@ -102,16 +89,13 @@
                   @endif
                 </div>
                 <!-- /.card-body -->
-                {{$records->links()}}
+                {{$patients ?? ''->links()}}
                 </div>
                 <!-- /.card -->
             </div>
             </div>
             <!-- /.row -->
         </div>
-        
-        
         </section>
-        </div>
-      <!-- /.content-wrapper -->
+        
 @endsection

@@ -66,7 +66,7 @@
             <a class="nav-link" href="#">Features</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="/billing/index">Billing</a>
             </li>
     
             <!-- Dropdown -->
@@ -111,7 +111,7 @@
                 <div class="card-body text-center mb-3">
             
                 <!-- Title -->
-                <h3 class="h3 my-4"><strong>Hospital Management System</strong></h3>
+                <h3 class="h3 my-4"><strong>Hospital Management Solution</strong></h3>
                 <!-- Text -->
                 <p class="card-text py-2">Manage medical facilities all in one place.</p>
                 <!-- Button -->
@@ -203,7 +203,7 @@
         <div class="card mdb-color text-center z-depth-2">
           <div class="card-body">
             <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"><strong>LABORATORIES</strong></h3>
-            <p class="white-text mb-0">We have standard Laboratories that can cater for all your tests</p>
+            <p class="white-text mb-0">Our Laboratories  have standard Equipments that can cater for all your tests needs</p>
           </div>
         </div>
         <!--/.Card Primary-->
@@ -233,7 +233,7 @@
         <div class="card light-blue darken-1 text-center z-depth-2">
           <div class="card-body">
             <h3 class="text-uppercase font-weight-bold purple-text mt-2 mb-3"><strong>AMBULANCE SERVICES</strong></h3>
-            <p class="white-text mb-0">We provide good Ambulance Services</p>
+            <p class="white-text mb-0">Our Ambulance Service Providers gives the best Ambulance Services</p>
           </div>
         </div>
         <!--/.Card Primary-->
@@ -268,7 +268,7 @@
     <div class="card red darken-4 text-center z-depth-2">
       <div class="card-body">
         <h3 class="text-uppercase font-weight-bold light-green-text mt-2 mb-3"><strong>CLINIC</strong></h3>
-        <p class="white-text mb-0">We Provide bother primary and secondary healthcare </p>
+        <p class="white-text mb-0">Our Clinics provide both primary and secondary healthcare </p>
       </div>
     </div>
     <!--/.Card Primary-->
@@ -296,6 +296,110 @@
 
     </div>
 
+    <!--Billing -->
+    <h4 class="text-uppercase font-weight-bold text-center">BILLING</h4>
+    <p class="font-weight-bold text-center">Make a transfer to UBA 1018921974 Datiyi Space Communications <br>
+    and then call the suport Center on 07082886732 </p>
+
+<!-- Grid row -->
+<div class="row">
+
+  <!-- Grid column -->
+  <div class="col-lg-4 col-md-12 mb-4">
+
+    <!--Card Primary-->
+    <div class="card mdb-color text-center z-depth-2">
+      <div class="card-body">
+        <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"><strong>Standard</strong></h3>
+        <p class="white-text mb-0">Billing for small Chemists or pharmacies for keeping inventory of sales</p>
+        <button type="button" data-toggle="modal" data-target="#standard" class="btn btn-outline-white btn-md waves-effect">MORE</button>
+      </div>
+    </div>
+    <!--/.Card Primary-->
+
+  </div>
+  <!-- Grid column -->
+
+  <!-- Grid column -->
+  <div class="col-lg-4 col-md-6 mb-4">
+
+    <!--Card Primary-->
+    <div class="card red darken-4 text-center z-depth-2">
+      <div class="card-body">
+        <h3 class="text-uppercase font-weight-bold light-green-text mt-2 mb-3"><strong>Standard1</strong></h3>
+        <p class="white-text mb-0">Billing for small Chemists or pharmacies for keeping inventory of sales</p>
+        <button type="button" data-toggle="modal" data-target="#standard" class="btn btn-outline-white btn-md waves-effect">MORE</button>
+        
+      </div>
+    </div>
+    <!--/.Card Primary-->
+
+  </div>
+ 
+  <div class="col-lg-4 col-md-6 mb-4">
+
+    <!--Card Primary-->
+    <div class="card light-blue darken-1 text-center z-depth-2">
+      <div class="card-body">
+        <h3 class="text-uppercase font-weight-bold purple-text mt-2 mb-3"><strong>Standard</strong></h3>
+        <p class="white-text mb-0">Billing for small Chemists or pharmacies for keeping inventory of sales</p>
+        <button type="button" data-toggle="modal" data-target="#standard" class="btn btn-outline-white btn-md waves-effect">MORE</button>
+      </div>
+    </div>
+    <!--/.Card Primary-->
+
+  </div>
+  <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+<!-- Grid row -->
+
+
+    <!--End Billing -->
+<!-- Standard Billing Modal-->
+  <div class="modal fade" id="standard" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Lab Investigation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form>
+            <div class="modal-body">
+            <div class="form-group">
+                <label>Patient ID: </label>
+                
+            </div>
+                
+            <div class="form-group">
+                <label>Name of Speciment</label>
+                <!--<input type="text" class="form-control" name="nameOfSpeciment"  placeholder="Name of Speciment"> -->
+            </div>
+            <div class="form-group">
+                <label>Examination Requested</label>
+                
+            </div>
+            <div class="form-group">
+                <label>Name of Lab</label>
+                
+            </div>
+            <div class="form-group">
+                <label>Result</label>
+                
+            </div>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-primary">Send Request</button> -->
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+        <!-- End Standard Billing Modal -->
+  
     <!-- Footer -->
     <footer class="page-footer font-small teal pt-4">
 

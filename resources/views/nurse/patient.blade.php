@@ -25,7 +25,7 @@
           <div class="container-fluid">
             <div class="row">
             <div class="col-12">
-                <button type="button" data-toggle="modal" data-target="#modalAddPersonel" class="btn btn-md btn-default">Add</button>
+                <!--<button type="button" data-toggle="modal" data-target="#modalAddPersonel" class="btn btn-md btn-default">Add Patient</button> -->
                 <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Patient</h3>
@@ -45,7 +45,7 @@
                   <table class="table table-hover">
                       <thead>
                           <tr>
-                          <th>ID</th>
+                          <!-- <th>ID</th>   -->
                           <th>Names</th>
                           <th>D.O.B</th>
                           <th>Phone Number</th>
@@ -58,22 +58,28 @@
 
                     <tbody>
                         <tr>
-                        <td>{{$patient->id}}</td>                      
+                        <!-- <td>{{$patient->id}}</td>        -->              
                          <td>{{$patient->fName}}&nbsp;{{$patient->mName}}&nbsp;{{$patient->lName}}</td>
                         <td>{{$patient->age}}</td>
                         <td>{{$patient->phone}}</td>
                         <td>{{$patient->state}}</td>
                         <td>{{$patient->residArea}}</td>
                         <td>
-                    <button data-toggle="modal" data-target="#delete{{$patient->id}}">
-                        <i class="fas fa-eject text-red"></i>
-                        </button>
-                        <button data-toggle="modal" data-target="#booking{{$patient->id}}">
+                       
+                         <button data-toggle="modal" data-target="#booking{{$patient->id}}">
                           <i class="fas fa-eye text-green"></i>
                           </button>
+
+                          <button data-toggle="modal" data-target="#addvitals{{$patient->id}}">
+                          <i class="fas fa-eye text-green"></i>
+                          </button>
+
                           <button data-toggle="modal" data-target="#edit{{$patient->id}}">
                             <i class="fas fa-edit text-blue"></i>
                             </button>
+                            <button data-toggle="modal" data-target="#delete{{$patient->id}}">
+                        <i class="fas fa-eject text-red"></i>
+                        </button>
                         </td>
                         <!-- Delete news modal-->
                       <div class="modal fade" id="delete{{$patient->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -88,7 +94,7 @@
                               <form action="/delete-patient-nurse" method="post" id="deleteUser">
                                 @csrf
                               <input name="patientId" id="id" type="hidden" value="{{$patient->id}}">
-                              <h5>Are you sure delete Patient?</h5>
+                              <h5>Are you sure delete this Patient?</h5>
                               <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
                             <button type="submit" type="submit" class="btn btn-danger btn-sm pull-right">Delete</button>
                               </form>
@@ -123,6 +129,48 @@
                       </div>
                     </div>
                     <!-- Delete News modal -->
+                    
+                    <!-- Add Patients Vital Signs-->
+                    <div class="modal fade" id="addvitals{{$patient->id}}" role="dialog" aria-labelledby="myModalLabel"
+                      aria-hidden="true">
+                      <!-- Change class .modal-sm to change the size of the modal -->
+                      <div class="modal-dialog modal-md" role="document">
+                        <div class="modal-content">
+                          <div class="modal-body">
+                              <form action = "/patient-vital-clerk" method="post" role="form" id="patient-vital1" >
+                                @csrf
+                              <input name="patientId" id="id" type="hidden" value="{{$patient->id}}">
+                              <h4 class="text text-center">NURSE OBSERVATION  </h4>
+                              <h6 class="text-danger text-center">Patient ID:{{$patient->id}}</h6>
+                              <span>{{$patient->fName}}</span>&nbsp;<span>{{$patient->mName}}</span>&nbsp;{{$patient->lName}}<hr>
+                              <span>{{$patient->age}}</span><hr>
+                              <span>{{$patient->phone}}</span><hr>
+                              <input type="text" id="form3" name="pulse" class="form-control form-control-sm validate" placeholder="Pulse">
+                                <div class="md-form mb-4">
+                                    
+                                </div>
+                                <div class="md-form mb-4">
+                                    <input type="text" id="form3" name="temperature" class="form-control form-control-sm validate" placeholder="Temperature">
+                                </div>
+                                <div class="md-form mb-4">
+                                    <input type="text" id="form3" name="respiration" class="form-control form-control-sm validate" placeholder="Respiration">
+                                </div>
+                                <div class="md-form mb-4">
+                                    <input type="text" id="form3" name="pressure" class="form-control form-control-sm validate" placeholder="Blood Pressure">
+                                </div>
+                                
+                                <div class="md-form mb-4">
+                                    <textarea id="form3" name="note" class="form-control form-control-sm validate" placeholder="Note"></textarea>
+                                </div>
+                              <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                            <button type="submit" type="submit" class="btn btn-info btn-sm pull-right">Add</button>
+                              </form>
+                            
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>                 
                    <!-- Edit Patient's records -->
                   <div class="modal fade" id="edit{{$patient->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                 aria-hidden="true">

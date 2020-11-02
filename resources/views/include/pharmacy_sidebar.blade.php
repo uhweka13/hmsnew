@@ -1,10 +1,10 @@
  <!-- Main Sidebar Container -->
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="#" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">Clerk
+      <span class="brand-text font-weight-light">Pharmacy
     </a>
   
     <!-- Sidebar -->
@@ -27,7 +27,7 @@
                with font-awesome or any other icon font library -->
   
           <li class="nav-item">
-            <a href="/clerk-index" class="nav-link">
+            <a href="/pharmacy-index" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -35,26 +35,26 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/patient-clerk" class="nav-link">
+            <a href="/pharmacy-drugs" class="nav-link">
               <i class="fas fa-blog"></i>
               <p>
-                Add Patient
+                Drugs
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/payment-clerk" class="nav-link">
+            <a href="/pharmacy-dispense" class="nav-link">
               <i class="fas fa-blog"></i>
               <p>
-                Payment
+                Dispense Drugs
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/record-clerk" class="nav-link">
+            <a href="/pharmacy-records" class="nav-link">
               <i class="fas fa-id-card-alt"></i>
               <p>
-                Patient records
+                Records
               </p>
             </a>
           </li>

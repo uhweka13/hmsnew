@@ -44,27 +44,27 @@
                   <table class="table table-hover">
                       <thead>
                           <tr>
-                          <th>ID</th>
+                          
                           <th>Names</th>
                           <th>Age</th>
                           <th>Phone Number</th>
                           <th>State</th>
                           <th>Location</th>
-                          <th>Action</th>
+                          <!-- <th>Action</th> -->
                           </tr>
                       </thead>
                       @foreach ($consultancies as $consultancy)
 
                     <tbody>
                         <tr>
-                        <td>{{$consultancy->id}}</td>                      
+                                            
                          <td>{{$consultancy->fName}}&nbsp;{{$consultancy->mName}}&nbsp;{{$consultancy->lName}}</td>
                         <td>{{$consultancy->age}}</td>
                         <td>{{$consultancy->phone}}</td>
                         <td>{{$consultancy->state}}</td>
                         <td>{{$consultancy->residArea}}</td>
                         <td>
-                    <button data-toggle="modal" data-target="#delete{{$consultancy->id}}">
+                   <!-- <button data-toggle="modal" data-target="#delete{{$consultancy->id}}">
                         <i class="fas fa-eject text-red"></i>
                         </button>
                         <button data-toggle="modal" data-target="#booking{{$consultancy->id}}">
@@ -72,7 +72,7 @@
                           </button>
                           <button data-toggle="modal" data-target="#vital{{$consultancy->id}}">
                             <i class="fas fa-eye text-blue"></i>
-                            </button>
+                            </button> -->
                         </td>
                      <!-- Booking modal-->
                      <div class="modal fade" id="booking{{$consultancy->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"

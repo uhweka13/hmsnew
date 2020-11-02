@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Patient;
+use App\patient_vitals;
 
 class nurseController extends Controller
 {
@@ -160,21 +161,15 @@ class nurseController extends Controller
     }
     public function patientVitals(Request $request)
     {
-        $this->validate($request,[
-            'temp'=>'required',
-            'respo'=>'required',
-            'pressure'=>'required',
-            'pulse'=>'required',
-            'note'=>'required',
-          ]);
-        $id = $request->input('patientId');
-        $update = Patient::find($id);
-        $update-> temp = $request->input('temp');
-        $update-> respo = $request->input('respo');
-        $update-> pressure = $request->input('pressure');
-        $update-> pulse = $request->input('pulse');
-        $update-> note = $request->input('note');
-        $update->save();
+        
+        $vitals = new patient_vitals();
+        $vitals->patient_id = $request->input('patientId');
+        $vitals-> pulse = $request->input('pulse');
+        $vitals-> temp = $request->input('temperature');
+        $vitals-> resp = $request->input('respiration');
+        $vitals-> pressure = $request->input('pressure');
+        $vitals-> Note = $request->input('note');
+        $vitals->save();
         return back()->with('success','Patient Vitals added successfully!');
     }
 }

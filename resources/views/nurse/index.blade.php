@@ -30,7 +30,7 @@
                 <div class="small-box bg-info">
                   <div class="inner">
                     <h3>1</h3>  
-                    <p>Patents recrds</p>
+                    <p>Patients records</p>
                   </div>
                   <div class="icon">
                     <i class="icon ion-ios-people"></i>
@@ -44,7 +44,7 @@
                 <div class="small-box bg-success">
                   <div class="inner">
                         <h3>5</h3>   
-                    <p>Nourses</p>
+                    <p>Nurses</p>
                   </div>
                   <div class="icon">
                     <i class="icon ion-ios-browsers"></i>

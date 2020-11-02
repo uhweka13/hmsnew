@@ -157,6 +157,7 @@
                 <option value="Nurse">Nurse</option>
                 <option value="pharmacy">Pharmacy</option>
                 <option value="Clerk">Clerk</option>
+                <option value="lab">Lab Scientist</option>
                 <option value="Others">Others</option>
             </select>
         </div>
@@ -177,7 +178,6 @@
             <option value="" disabled selected>Choose gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
-            <option value="other">Other</option>
         </select>
     </div>
           <div class="md-form mb-4">

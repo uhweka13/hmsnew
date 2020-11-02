@@ -1,4 +1,4 @@
-@extends('layouts.clerk_app')
+@extends('layouts.pharmacy_app')
 @section('content')
         <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -13,7 +13,7 @@
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item"><a href="admin-index">Home</a></li>
-                  <li class="breadcrumb-item active">Clerk Dashboard</li>
+                  <li class="breadcrumb-item active">Pharmacy Dashboard</li>
                 </ol>
               </div><!-- /.col -->
             </div><!-- /.row -->
@@ -30,7 +30,7 @@
                 <div class="small-box bg-info">
                   <div class="inner">
                     <h3>1</h3>  
-                    <p>Add Patients</p>
+                    <p>Drugs</p>
                   </div>
                   <div class="icon">
                     <i class="icon ion-ios-people"></i>
@@ -44,7 +44,7 @@
                 <div class="small-box bg-success">
                   <div class="inner">
                         <h3>5</h3>   
-                    <p>Patient records</p>
+                    <p>Dispense Drugs</p>
                   </div>
                   <div class="icon">
                     <i class="icon ion-ios-browsers"></i>
@@ -59,7 +59,7 @@
                   <div class="inner">
                   <h3>4</h3> 
     
-                    <p>Payment</p>
+                    <p>Records</p>
                   </div>
                   <div class="icon">
                     <i class="icon ion-chatbubble"></i>

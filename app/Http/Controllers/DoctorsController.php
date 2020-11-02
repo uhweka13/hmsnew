@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Patient;
 use App\Precord;
+Use App\patient_vitals;
+Use App\lab_investigations;
 use DB;
 class DoctorsController extends Controller
 {
@@ -114,5 +116,25 @@ class DoctorsController extends Controller
         ->paginate(20);
         return view('doctor.records')->with('records',$records);
     }
- 
+    public function labInvestigate(Request $request)
+    {
+        
+      
+        $this->validate($request,[
+            'nameOfSpeciment'=>'required',
+            'exRequest'=>'required',
+            'labName'=>'required'
+        ]);  
+        $id = $request->input('patientId');
+        $post = new lab_investigations();
+        $post-> pId = $id;
+        $post-> speciment = $request->input('nameOfSpeciment');
+        $post-> examination = $request->input('exRequest');
+        $post-> Lab = $request->input('labName');
+        $post-> hId = Auth::user()->hId;
+        $post->save();
+        return back()->with('success','Patient Investigation sent!');
+    }
+  
+   
 }

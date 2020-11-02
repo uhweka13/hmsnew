@@ -42,6 +42,7 @@
               </p>
             </a>
           </li>
+          
           <li class="nav-item">
             <a href="/patient-records" class="nav-link">
               <i class="fas fa-id-card-alt"></i>
