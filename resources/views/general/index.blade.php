@@ -115,7 +115,7 @@
                 <!-- Text -->
                 <p class="card-text py-2">Manage medical facilities all in one place.</p>
                 <!-- Button -->
-                <a href="/login" style="border-radius: 50px;" class="btn btn-outline-secondary btn-rounded waves-effect">Getting Started</a>
+                <a href="/login" style="border-radius: 50px;" class="btn btn-outline-secondary btn-rounded waves-effect">Get Started</a>
             
                 </div>
             
@@ -298,6 +298,9 @@
 
     <!--Billing -->
     <h4 class="text-uppercase font-weight-bold text-center">BILLING</h4>
+    <h5 class="font-weight-bold text-center">Click on 
+    <a href="/login" style="border-radius: 50px;" class="btn btn-rounded waves-effect">Get Started</a>
+    to get started with free trial</h5>
     <p class="font-weight-bold text-center">Make a transfer to UBA 1018921974 Datiyi Space Communications <br>
     and then call the suport Center on 07082886732 </p>
 
@@ -312,7 +315,13 @@
       <div class="card-body">
         <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"><strong>Standard</strong></h3>
         <p class="white-text mb-0">Billing for small Chemists or pharmacies for keeping inventory of sales</p>
-        <button type="button" data-toggle="modal" data-target="#standard" class="btn btn-outline-white btn-md waves-effect">MORE</button>
+        <h6 class="white-text mb-0">N5,000.00 per Annum</h6>
+        <h4 class="white-text mb-0">Features</h4>
+        <ul class="white-text mb-0">
+        <li>Inventory</li>
+        <li>Sales</li>
+        </ul>
+        <button type="button" data-toggle="modal" data-target="#standard" class="btn btn-outline-white btn-md waves-effect">Pay</button>
       </div>
     </div>
     <!--/.Card Primary-->
@@ -326,9 +335,18 @@
     <!--Card Primary-->
     <div class="card red darken-4 text-center z-depth-2">
       <div class="card-body">
-        <h3 class="text-uppercase font-weight-bold light-green-text mt-2 mb-3"><strong>Standard1</strong></h3>
-        <p class="white-text mb-0">Billing for small Chemists or pharmacies for keeping inventory of sales</p>
-        <button type="button" data-toggle="modal" data-target="#standard" class="btn btn-outline-white btn-md waves-effect">MORE</button>
+        <h3 class="text-uppercase font-weight-bold light-green-text mt-2 mb-3"><strong>Premium</strong></h3>
+        <p class="white-text mb-0">Billing for Clinics for keeping inventory of sales</p>
+        <h6 class="white-text mb-0">N20,000.00 per Annum</h6>
+        <h4 class="white-text mb-0">Features</h4>
+        <ul class="white-text mb-0">
+        <li>Inventory</li>
+        <li>Sales</li>
+        <li>Manage Personnel</li>
+        <li>Manage Departments</li>
+        <li>Manage Patients</li>
+        </ul>
+        <button type="button" data-toggle="modal" data-target="#premium" class="btn btn-outline-white btn-md waves-effect">Pay</button>
         
       </div>
     </div>
@@ -341,9 +359,19 @@
     <!--Card Primary-->
     <div class="card light-blue darken-1 text-center z-depth-2">
       <div class="card-body">
-        <h3 class="text-uppercase font-weight-bold purple-text mt-2 mb-3"><strong>Standard</strong></h3>
-        <p class="white-text mb-0">Billing for small Chemists or pharmacies for keeping inventory of sales</p>
-        <button type="button" data-toggle="modal" data-target="#standard" class="btn btn-outline-white btn-md waves-effect">MORE</button>
+        <h3 class="text-uppercase font-weight-bold purple-text mt-2 mb-3"><strong>Gold</strong></h3>
+        <p class="white-text mb-0">Billing for Hospitals for keeping inventory of sales</p>
+        <h6 class="white-text mb-0">N50,000.00 per Annum</h6>
+        <h4 class="white-text mb-0">Features</h4>
+        <ul class="white-text mb-0">
+        <li>Inventory</li>
+        <li>Sales</li>
+        <li>Manage Personnel</li>
+        <li>Manage Departments</li>
+        <li>Manage Patients</li>
+        <li>Provide online Consultancy</li>
+        </ul>
+        <button type="button" data-toggle="modal" data-target="#gold" class="btn btn-outline-white btn-md waves-effect">Pay</button>
       </div>
     </div>
     <!--/.Card Primary-->
