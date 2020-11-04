@@ -45,7 +45,7 @@
 
         <!-- Navbar brand -->
         <a class="navbar-brand" href="/">FlandCare</a>
-    
+
         <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
         aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -218,7 +218,7 @@
         <div class="card red darken-4 text-center z-depth-2">
           <div class="card-body">
             <h3 class="text-uppercase font-weight-bold light-green-text mt-2 mb-3"><strong>X-RAY/SCANNING</strong></h3>
-            <p class="white-text mb-0">Good and standard x-Ray and Scannings</p>
+            <p class="white-text mb-0">Good and standard x-Ray and Ultrasound Scan</p>
           </div>
         </div>
         <!--/.Card Primary-->
