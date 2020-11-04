@@ -103,3 +103,6 @@ Route::get('/lab-consumables', 'labController@consumables');
 Route::get('/lab-records', 'labController@records');
 Route::get('/lab-tests', 'labController@test');
 Route::post('/add-consumables-lab', 'labController@addConsumables');
+
+//Post Controller
+Route::resource('posts', 'PostsController');
