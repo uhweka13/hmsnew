@@ -33,7 +33,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="/pharmacy-store" method="POST">
+      <form action="/post-store" method="POST">
      
       @csrf
             <div class="modal-body">
