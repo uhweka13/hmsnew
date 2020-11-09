@@ -66,7 +66,10 @@
             <a class="nav-link" href="#">Features</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/billing/index">Billing</a>
+             <a class="nav-link" href="/posts">Health Tips</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Billing</a>
             </li>
     
             <!-- Dropdown -->
@@ -122,6 +125,8 @@
             </div>
             <!-- Jumbotron -->
     </div>
+
+
     <div class="container-fluid">
         <h4 class="text-uppercase font-weight-bold text-center">ABOUT US</h4>
 
@@ -157,6 +162,7 @@
         <!--/.Card-->
 
       </div>
+      
       <!-- Grid column -->
 
       <!-- Grid column -->

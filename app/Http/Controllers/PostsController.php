@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Post;
+use App\Precord;
 use DB;
 
 class PostsController extends Controller
@@ -78,7 +79,7 @@ class PostsController extends Controller
         $post->cover_image = $fileNameToStore;
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post created.');
+        return redirect('doctor.index')->with('success', 'Post created.');
     }
 
     /**
