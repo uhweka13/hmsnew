@@ -79,7 +79,7 @@ class PostsController extends Controller
         $post->cover_image = $fileNameToStore;
         $post->save();
 
-        return redirect('doctor.index')->with('success', 'Post created.');
+        return back()->with('success', 'Post created.');
     }
 
     /**
