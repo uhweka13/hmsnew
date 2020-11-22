@@ -34,8 +34,9 @@ class LoginController extends Controller
                 return redirect('/pharmacy-index');
             }else if ($slug->role === "lab") {
                 return redirect('/lab-index');
-            }
-            else if ($slug->role === "admin" && $slug->status === "Pending") {
+            }else if ($slug->role === "patient") {
+                return redirect('/patient-index');
+            }else if ($slug->role === "admin" && $slug->status === "Pending") {
                 return redirect('/intro');
             }
             

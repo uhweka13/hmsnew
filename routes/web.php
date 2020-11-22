@@ -107,3 +107,6 @@ Route::post('/add-consumables-lab', 'labController@addConsumables');
 //Post Controller
 Route::resource('/post-store', 'PostsController');
 Route::resource('posts', 'PostsController');
+
+//Patient  Controller
+Route::resource('/patient-index', 'PatientsController');

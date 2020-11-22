@@ -11,7 +11,12 @@
   
   <li class="nav-item">
     <a class="nav-link" id="pills-addhospital-tab" data-toggle="pill" href="#pills-addhospital" role="tab"
-      aria-controls="pills-contact" aria-selected="false">Want to add Hospital?</a>
+      aria-controls="pills-contact" aria-selected="false">Hospital Admin? Click here</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" id="pills-addhospital-tab" data-toggle="pill" href="#pills-addhospital" role="tab"
+      aria-controls="pills-contact" aria-selected="false">Patient? Click here</a>
   </li>
 </ul>
 <div class="tab-content pt-2 pl-1" id="pills-tabContent">
